@@ -1,0 +1,60 @@
+
+<!DOCTYPE html>
+<head>
+  <title>Después: estilo con colgroup y col</title>
+  <style>
+    table {
+      border-collapse: collapse;
+      margin-bottom: 2em;
+    }
+    th, td {
+      border: 1px solid black;
+      padding: 6px 12px;
+    }
+  </style>
+</head>
+<body>
+
+  <h1>Despues: estilo con colgroup y col</h1>
+
+  <table>
+    <colgroup>
+      <col>
+      <col style="background-color: yellow">
+    </colgroup>
+    <tr>
+      <th>Dato 1</th>
+      <th>Dato 2</th>
+    </tr>
+    <tr>
+      <td>Calcuta</td>
+      <td>Pizza</td>
+    </tr>
+    <tr>
+      <td>Robots</td>
+      <td>Jazz</td>
+    </tr>
+  </table>
+
+  <h2>Extra</h2>
+
+  <table>
+    <colgroup>
+      <col style="background-color: yellow" span="2">
+    </colgroup>
+    <tr>
+      <th>Dato 1</th>
+      <th>Dato 2</th>
+    </tr>
+    <tr>
+      <td>Calcuta</td>
+      <td>Pizza</td>
+    </tr>
+    <tr>
+      <td>Robots</td>
+      <td>Jazz</td>
+    </tr>
+  </table>
+
+</body>
+</html>

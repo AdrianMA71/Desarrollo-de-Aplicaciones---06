@@ -1,0 +1,197 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<meta name="description" content="Formulario de matrícula para el programa Inglés Intensivo B2 del Centro de Idiomas UCSM.">
+<title>Reservar mi cupo · Inglés Intensivo B2</title>
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link href="https://fonts.googleapis.com/css2?family=Poppins:wght@500;600;700&family=Inter:wght@400;500;600;700&family=IBM+Plex+Mono:wght@400;500;600&display=swap" rel="stylesheet">
+<link rel="stylesheet" href="Ejercicio_3.css">
+<style>
+  body{display:flex;align-items:center;justify-content:center;min-height:100vh;padding:32px 16px;}
+  .form-card{
+    display:grid;grid-template-columns:0.8fr 1.5fr;
+    max-width:920px;width:100%;
+    background:var(--paper);
+    border-radius:20px;overflow:hidden;
+    box-shadow:0 30px 60px -25px rgba(20,22,43,0.28);
+  }
+  .form-side{
+    background:linear-gradient(155deg, var(--accent-deep), var(--accent) 75%);
+    color:#EFF7F2;padding:40px 28px;
+    display:flex;flex-direction:column;justify-content:space-between;
+  }
+  .form-side .mark{font-family:'IBM Plex Mono',monospace;font-size:12.5px;letter-spacing:.1em;opacity:.85;text-transform:uppercase;}
+  .form-side h1{font-family:'Poppins',sans-serif;font-weight:600;font-size:26px;line-height:1.2;margin:16px 0 10px;}
+  .form-side p{font-size:13.5px;line-height:1.6;color:#D6E9DD;max-width:26ch;}
+  .form-side ul{list-style:none;margin:22px 0 0;padding:0;font-size:12.5px;}
+  .form-side li{display:flex;gap:9px;padding:8px 0;border-top:1px solid rgba(255,255,255,0.16);color:#E3F1E8;}
+  .form-side li:first-child{border-top:none;}
+  .form-side .dot{width:6px;height:6px;border-radius:50%;background:var(--warm);margin-top:6px;flex:none;}
+
+  .form-main{padding:38px 36px 30px;}
+  .form-main h2{font-family:'Poppins',sans-serif;font-weight:700;font-size:21px;margin:0 0 4px;}
+  .form-main .sub{color:var(--muted);font-size:13.5px;margin:0 0 22px;}
+
+  form{display:flex;flex-direction:column;gap:15px;}
+  .row{display:grid;grid-template-columns:1fr 1fr;gap:14px;}
+  .field{display:flex;flex-direction:column;gap:6px;}
+  label{font-size:12.5px;font-weight:700;color:var(--accent-deep);}
+  input, select{
+    font-family:inherit;font-size:14px;font-weight:500;
+    padding:10px 12px;border:1.6px solid var(--line);border-radius:9px;
+    background:#FBFBFE;color:var(--ink);outline:none;
+    transition:border-color .15s ease, box-shadow .15s ease;
+  }
+  input::placeholder{color:#8A8FA6;font-weight:400;}
+  input:focus, select:focus{border-color:var(--accent);box-shadow:0 0 0 3px var(--accent-soft);}
+  .field.error input, .field.error select{border-color:#B3492F;}
+  .hint{font-size:11px;color:var(--muted);}
+  .msg{font-size:11px;color:#B3492F;display:none;}
+  .field.error .msg{display:block;}
+  .field.error .hint{display:none;}
+
+  .terms{display:flex;align-items:flex-start;gap:9px;font-size:12px;color:var(--muted);}
+  .terms input{width:15px;height:15px;margin-top:2px;accent-color:var(--accent);}
+
+  button{
+    margin-top:4px;padding:12px;border:2px solid var(--accent-deep);border-radius:9px;
+    background:var(--accent-deep);color:#fff;font-family:inherit;font-weight:700;font-size:14px;
+    cursor:pointer;transition:background .15s ease;
+  }
+  button:hover{background:var(--accent);border-color:var(--accent);}
+
+  .success{display:none;margin-top:6px;padding:12px 14px;background:var(--accent-soft);color:var(--accent-deep);border-radius:9px;font-size:13px;}
+  .back{display:inline-block;margin-bottom:18px;font-size:13px;color:var(--muted);text-decoration:none;}
+  .back:hover{color:var(--accent);}
+
+  @media (max-width:700px){
+    .form-card{grid-template-columns:1fr;}
+    .row{grid-template-columns:1fr;}
+    .form-side{padding:30px 26px;}
+    .form-main{padding:30px 26px;}
+  }
+</style>
+</head>
+<body>
+
+<div class="form-card">
+  <aside class="form-side">
+    <div>
+      <div class="mark">Centro de Idiomas · UCSM</div>
+      <h1>Reserva tu cupo para Inglés Intensivo B2.</h1>
+      <p>Completa tus datos y el equipo académico te contactará para confirmar tu ubicación y horario.</p>
+    </div>
+    <ul>
+      <li><span class="dot"></span>Próximo inicio: 06 de octubre</li>
+      <li><span class="dot"></span>Grupos de máximo 14 personas</li>
+      <li><span class="dot"></span>Respuesta en menos de 48 horas</li>
+    </ul>
+  </aside>
+
+  <div class="form-main">
+    <a href="Ejercicio_3.html" class="back">← Volver al programa</a>
+    <h2>Formulario de matrícula</h2>
+    <p class="sub">Todos los campos son obligatorios.</p>
+
+    <form id="matriculaForm" novalidate>
+      <div class="field" data-field>
+        <label for="nombre">Nombre completo</label>
+        <input type="text" id="nombre" name="nombre" placeholder="Ej. Ana Lucía Velazco"
+               required minlength="3" maxlength="50" pattern="^[A-Za-zÁÉÍÓÚáéíóúÑñ\s]{3,50}$">
+        <span class="hint">Solo letras y espacios.</span>
+        <span class="msg">⚠ Escribe tu nombre solo con letras (3–50 caracteres).</span>
+      </div>
+
+      <div class="row">
+        <div class="field" data-field>
+          <label for="correo">Correo electrónico</label>
+          <input type="email" id="correo" name="correo" placeholder="ana@correo.com" required maxlength="60">
+          <span class="hint">Te enviaremos la confirmación aquí.</span>
+          <span class="msg">⚠ Escribe un correo electrónico válido.</span>
+        </div>
+        <div class="field" data-field>
+          <label for="telefono">Teléfono</label>
+          <input type="tel" id="telefono" name="telefono" placeholder="987 654 321"
+                 required pattern="^9[0-9]{8}$" maxlength="9">
+          <span class="hint">9 dígitos, empieza con 9.</span>
+          <span class="msg">⚠ Ingresa un número peruano válido (9 dígitos).</span>
+        </div>
+      </div>
+
+      <div class="row">
+        <div class="field" data-field>
+          <label for="nivel">Nivel actual</label>
+          <select id="nivel" name="nivel" required>
+            <option value="" disabled selected>Selecciona una opción</option>
+            <option value="B1 acreditado">B1 acreditado</option>
+            <option value="Rindo examen de ubicación">Rindo examen de ubicación</option>
+          </select>
+          <span class="hint">Para confirmar tu ingreso al grupo.</span>
+          <span class="msg">⚠ Selecciona tu nivel actual.</span>
+        </div>
+        <div class="field" data-field>
+          <label for="horario">Horario preferido</label>
+          <select id="horario" name="horario" required>
+            <option value="" disabled selected>Selecciona una opción</option>
+            <option value="Mañana (8:00–10:00 a.m.)">Mañana (8:00–10:00 a.m.)</option>
+            <option value="Tarde (4:00–6:00 p.m.)">Tarde (4:00–6:00 p.m.)</option>
+            <option value="Noche (7:00–9:00 p.m.)">Noche (7:00–9:00 p.m.)</option>
+          </select>
+          <span class="hint">Sujeto a disponibilidad de grupo.</span>
+          <span class="msg">⚠ Selecciona un horario.</span>
+        </div>
+      </div>
+
+      <label class="terms" data-field>
+        <input type="checkbox" id="terminos" name="terminos" required>
+        Acepto ser contactado por el Centro de Idiomas UCSM para coordinar mi matrícula.
+      </label>
+
+      <button type="submit">Confirmar mi reserva</button>
+      <div class="success" id="successMsg">✓ Solicitud enviada. Te escribiremos para confirmar tu cupo.</div>
+    </form>
+  </div>
+</div>
+
+<script>
+  const form = document.getElementById('matriculaForm');
+  const successMsg = document.getElementById('successMsg');
+
+  function fieldOf(el){ return el.closest('[data-field]'); }
+
+  function validateField(el){
+    const ok = el.checkValidity();
+    fieldOf(el).classList.toggle('error', !ok);
+    return ok;
+  }
+
+  form.querySelectorAll('input, select').forEach(el=>{
+    el.addEventListener('input', ()=> validateField(el));
+    el.addEventListener('change', ()=> validateField(el));
+    el.addEventListener('blur', ()=> validateField(el));
+  });
+
+  form.addEventListener('submit', function(e){
+    e.preventDefault();
+    successMsg.style.display = 'none';
+
+    let allValid = true;
+    form.querySelectorAll('input, select').forEach(el=>{
+      if(!validateField(el)) allValid = false;
+    });
+
+    if(allValid){
+      successMsg.style.display = 'block';
+      form.reset();
+      form.querySelectorAll('[data-field]').forEach(f=>f.classList.remove('error'));
+    } else {
+      const firstError = form.querySelector('.field.error input, .field.error select');
+      if(firstError) firstError.focus();
+    }
+  });
+</script>
+
+</body>
+</html>

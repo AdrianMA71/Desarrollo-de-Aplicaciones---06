@@ -1,0 +1,127 @@
+/* parte a: selectores de atributo */
+
+a[href^="https"] {
+    font-weight: bold;
+}
+
+a[href$=".pdf"] {
+    background-color: #f0f0f0;
+    padding: 2px 8px;
+    border-radius: 5px;
+}
+
+a[class="especial"] {
+    font-size: 20px;
+}
+
+a[target="_blank"] {
+    border: 2px solid #e67e22;
+    padding: 2px 8px;
+    border-radius: 5px;
+}
+
+input[type="text"] {
+    background-color: #ecf0f1;
+}
+
+input[type="email"] {
+    background-color: #d5f5e3;
+}
+
+input[type="password"] {
+    background-color: #fadbd8;
+}
+
+div[data-info="importante"] {
+    padding: 10px;
+    border-radius: 5px;
+}
+
+div[lang="es"] {
+    padding: 10px;
+    border-radius: 5px;
+}
+
+hr {
+    border: 2px dashed #2c3e50;
+    margin: 40px 0;
+}
+
+/* parte b: pseudo clases */
+
+.btn-hover:hover {
+    padding: 12px 30px;
+    border: none;
+    border-radius: 5px;
+    cursor: pointer;
+}
+
+.input-focus:focus {
+    border: 3px solid #2c3e50;
+    outline: none;
+}
+
+.enlace-estados:visited {
+    font-style: italic;
+}
+
+.enlace-estados:hover {
+    font-size: 18px;
+}
+
+.enlace-estados:active {
+    text-decoration: none;
+}
+
+.lista-hijos li:first-child {
+    padding: 10px;
+    border-radius: 5px;
+}
+
+.lista-hijos li:last-child {
+    padding: 10px;
+    border-radius: 5px;
+}
+
+.lista-hijos li:nth-child(3) {
+    padding: 10px;
+    border-radius: 5px;
+}
+
+.check-ejemplo:checked {
+    transform: scale(1.5);
+}
+
+.input-disabled:disabled {
+    background-color: #bdc3c7;
+}
+
+/* parte c: pseudo elementos */
+
+.letra-grande::first-letter {
+    font-size: 50px;
+    font-weight: bold;
+}
+
+.before-after::before {
+    content: ">>> ";
+    font-weight: bold;
+}
+
+.before-after::after {
+    content: " <<<";
+    font-weight: bold;
+}
+
+.seleccion-color::selection {
+    background-color: #9b59b6;
+    color: white;
+}
+
+.placeholder-color::placeholder {
+    font-style: italic;
+}
+
+.marcador-color::marker {
+    font-size: 20px;
+}

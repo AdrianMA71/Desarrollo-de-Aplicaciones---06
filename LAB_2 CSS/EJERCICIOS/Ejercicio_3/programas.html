@@ -1,0 +1,84 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Cultural - Programas</title>
+    <link rel="stylesheet" href="estilos.css">
+</head>
+<body>
+    <header>
+        <div class="contenedor">
+            <div class="logo">
+                <img src="imagenes/logo.png" alt="Logo Cultural">
+            </div>
+            <button class="hamburguesa" aria-label="Menú">
+                <span></span>
+                <span></span>
+                <span></span>
+            </button>
+            <nav>
+                <ul class="menu">
+                    <li><a href="index.html">Inicio</a></li>
+                    <li><a href="programas.html" class="activo">Programas</a></li>
+                    <li><a href="contacto.html">Contacto</a></li>
+                </ul>
+            </nav>
+        </div>
+    </header>
+
+    <main>
+        <section class="programas">
+            <h2>Nuestros Programas</h2>
+            <div class="grid-cursos">
+                <div class="tarjeta">
+                    <img src="imagenes/jovenes.png" alt="Jóvenes y Adultos">
+                    <h3>Inglés para Jóvenes y Adultos</h3>
+                    <p>Para mayores de 13 años. Todos los niveles.</p>
+                    <span class="precio">S/ 350/mes</span>
+                    <a href="#" class="btn-detalle">Más detalles →</a>
+                </div>
+                <div class="tarjeta">
+                    <img src="imagenes/ninos.png" alt="Niños">
+                    <h3>Inglés para Niños y Adolescentes</h3>
+                    <p>De 3 a 12 años. Aprendizaje lúdico.</p>
+                    <span class="precio">S/ 280/mes</span>
+                    <a href="#" class="btn-detalle">Más detalles →</a>
+                </div>
+                <div class="tarjeta">
+                    <img src="imagenes/speaking.png" alt="Speaking Lab">
+                    <h3>Curso SPEAKING LAB</h3>
+                    <p>Fluidez y conversación con docentes nativos.</p>
+                    <span class="precio">S/ 400/mes</span>
+                    <a href="#" class="btn-detalle">Más detalles →</a>
+                </div>
+                <div class="tarjeta">
+                    <img src="imagenes/examenes.png" alt="Exámenes">
+                    <h3>Preparación Exámenes</h3>
+                    <p>TOEFL, IELTS y certificaciones internacionales.</p>
+                    <span class="precio">S/ 450/mes</span>
+                    <a href="#" class="btn-detalle">Más detalles →</a>
+                </div>
+            </div>
+        </section>
+    </main>
+
+    <footer>
+        <p>&copy; 2023 CENTRO CULTURAL PERUANO NORTEAMERICANO</p>
+        <p><a href="mailto:informes@cultural.edu.pe">informes@cultural.edu.pe</a></p>
+    </footer>
+
+    <script>
+        const hamburguesa = document.querySelector('.hamburguesa');
+        const menu = document.querySelector('.menu');
+        hamburguesa.addEventListener('click', () => {
+            menu.classList.toggle('abierto');
+        });
+        document.querySelectorAll('.menu a').forEach(enlace => {
+            enlace.addEventListener('click', () => {
+                menu.classList.remove('abierto');
+            });
+        });
+    </script>
+</body>
+</html>

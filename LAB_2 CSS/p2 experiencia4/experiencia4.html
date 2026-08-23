@@ -1,0 +1,134 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Experiencia 4</title>
+    <link rel="stylesheet" href="estilos4.css">
+</head>
+<body>
+
+<!-- parte a: selectores combinados y multiples -->
+
+<h2>PARTE A: SELECTORES COMBINADOS Y MULTIPLES</h2>
+
+<!-- combinado 1: descendiente -->
+<p><strong>COMBINADO 1:</strong> Descendiente - todos los p dentro de .padre</p>
+<div class="padre">
+    <p>Parrafo dentro de div</p>
+    <div>
+        <p>Parrafo dentro de otro div</p>
+    </div>
+</div>
+
+<!-- combinado 2: hijo directo -->
+<p><strong>COMBINADO 2:</strong> Hijo directo - solo los p hijos directos de .contenedor</p>
+<div class="contenedor">
+    <p>Parrafo hijo directo (recibe estilo)</p>
+    <div>
+        <p>Parrafo nieto (no recibe estilo)</p>
+    </div>
+</div>
+
+<!-- combinado 3: adyacente -->
+<p><strong>COMBINADO 3:</strong> Adyacente - solo el primer p despues de h3</p>
+<h3 class="titulo-adyacente">Titulo</h3>
+<p>Parrafo adyacente (recibe estilo)</p>
+<p>Otro parrafo (no recibe estilo)</p>
+
+<!-- combinado 4: hermanos -->
+<p><strong>COMBINADO 4:</strong> Hermanos - todos los p despues de h3</p>
+<h3 class="titulo-hermanos">Titulo</h3>
+<p>Parrafo hermano 1 (recibe estilo)</p>
+<p>Parrafo hermano 2 (recibe estilo)</p>
+
+<!-- multiple 1: agrupados con coma -->
+<p><strong>MULTIPLE 1:</strong> div, p, span</p>
+<div class="multiples">Texto en div</div>
+<p class="multiples">Texto en p</p>
+<span class="multiples">Texto en span</span>
+
+<!-- multiple 2: p y span dentro de contenedor -->
+<p><strong>MULTIPLE 2:</strong> p y span dentro de .contenedor-multiples</p>
+<div class="contenedor-multiples">
+    <p>Parrafo</p>
+    <span>Span</span>
+</div>
+
+<hr>
+
+<!-- parte b: selectores regex -->
+
+<h2>PARTE B: SELECTORES REGEX</h2>
+
+<!-- regex 1: empieza con https -->
+<p><strong>REGEX 1:</strong> [href^="https"] - enlaces que empiezan con https</p>
+<a href="https://www.google.com">Enlace que empieza con https (recibe estilo)</a>
+<br>
+<a href="http://www.google.com">Enlace que empieza con http</a>
+
+<!-- regex 2: termina en .pdf -->
+<p><strong>REGEX 2:</strong> [href$=".pdf"] - enlaces que terminan en .pdf</p>
+<a href="documento.pdf">Documento PDF (recibe estilo)</a>
+<br>
+<a href="documento.docx">Documento Word</a>
+
+<!-- regex 3: contiene google -->
+<p><strong>REGEX 3:</strong> [href*="google"] - enlaces que contienen google</p>
+<a href="https://www.google.com">Enlace con google (recibe estilo)</a>
+<br>
+<a href="https://www.youtube.com">Enlace sin google</a>
+
+<hr>
+
+<!-- parte c: herencia y cascada -->
+
+<h2>PARTE C: HERENCIA Y CASCADA</h2>
+
+<!-- herencia 1: color -->
+<p><strong>HERENCIA 1:</strong> color se hereda a los hijos</p>
+<div class="padre-herencia">
+    <p>Este parrafo hereda el color azul del div padre</p>
+    <p>Este parrafo tambien hereda el color azul</p>
+    <p>CSS significa hojas de estilo en cascada</p>
+</div>
+
+<!-- herencia 2: text-align -->
+<p><strong>HERENCIA 2:</strong> text-align se hereda</p>
+<div class="padre-centrado">
+    <p>Este parrafo hereda la alineacion centrada</p>
+    <p>Este parrafo tambien esta centrado</p>
+    <p>La herencia permite que los hijos tomen estilos del padre</p>
+</div>
+
+<!-- herencia 3: font-family -->
+<p><strong>HERENCIA 3:</strong> font-family se hereda</p>
+<div class="padre-fuente">
+    <p>Este parrafo hereda la fuente Times New Roman</p>
+    <span>Este span tambien hereda la misma fuente</span>
+    <p>CSS permite dar estilo a los elementos html</p>
+</div>
+
+<!-- contraste: borde no se hereda -->
+<p><strong>CONTRASTE:</strong> border NO se hereda</p>
+<div class="padre-borde">
+    <p>El div padre tiene borde, pero este parrafo NO lo hereda</p>
+    <p>El borde no es una propiedad que se herede</p>
+    <p>La herencia no aplica a todas las propiedades</p>
+</div>
+
+<!-- cascada 1: id gana a clase -->
+<p><strong>CASCADA 1:</strong> ID gana a Clase</p>
+<p class="texto-cascada" id="texto-especial">Texto con ID y Clase (gana ID)</p>
+
+<!-- cascada 2: clase gana a etiqueta -->
+<p><strong>CASCADA 2:</strong> Clase gana a Etiqueta</p>
+<p class="texto-clase">Texto con clase (recibe estilo)</p>
+<p>Texto sin clase</p>
+
+<!-- cascada 3: orden - ultimo gana -->
+<p><strong>CASCADA 3:</strong> orden - ultimo gana</p>
+<p class="orden-ultimo">Texto con clase (ultima regla)</p>
+
+</body>
+</html>

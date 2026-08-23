@@ -1,0 +1,91 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Cultural - Contacto</title>
+    <link rel="stylesheet" href="estilos.css">
+</head>
+<body>
+    <header role="banner">
+        <div class="contenedor">
+            <div class="logo">
+                <img src="imagenes/logo.png" alt="Logo del Centro Cultural Peruano Norteamericano">
+            </div>
+            <button class="hamburguesa" aria-label="Abrir menú de navegación">
+                <span></span>
+                <span></span>
+                <span></span>
+            </button>
+            <nav role="navigation" aria-label="Menú principal">
+                <ul class="menu">
+                    <li><a href="index.html">Inicio</a></li>
+                    <li><a href="programas.html">Programas</a></li>
+                    <li><a href="eventos.html">Eventos</a></li>
+                    <li><a href="testimonios.html">Testimonios</a></li>
+                    <li><a href="contacto.html" class="activo" aria-current="page">Contacto</a></li>
+                </ul>
+            </nav>
+        </div>
+    </header>
+
+    <main role="main">
+        <section class="contacto" aria-labelledby="contacto-titulo">
+            <h2 id="contacto-titulo">Contáctanos</h2>
+            <div class="grid-contacto">
+                <form action="#" method="post" aria-label="Formulario de contacto">
+                    <label for="nombre">Nombre:</label>
+                    <input type="text" id="nombre" placeholder="Tu nombre" required aria-required="true">
+
+                    <label for="email">Correo:</label>
+                    <input type="email" id="email" placeholder="tú@email.com" required aria-required="true">
+
+                    <label for="telefono">Teléfono:</label>
+                    <input type="tel" id="telefono" placeholder="Ej: 51 985647752">
+
+                    <label for="mensaje">Mensaje:</label>
+                    <textarea id="mensaje" rows="4" placeholder="Escribe tu mensaje..."></textarea>
+
+                    <label for="curso-interes">Curso de interés:</label>
+                    <select id="curso-interes">
+                        <option value="">Selecciona...</option>
+                        <option value="adultos">Jóvenes y Adultos</option>
+                        <option value="ninos">Niños y Adolescentes</option>
+                        <option value="speaking">Speaking Lab</option>
+                        <option value="examenes">Preparación Exámenes</option>
+                    </select>
+
+                    <button type="submit" class="btn">Enviar</button>
+                </form>
+                <div class="info" aria-labelledby="info-titulo">
+                    <h3 id="info-titulo">Información de contacto</h3>
+                    <p>Dirección: Calle Melgar 109 - Arequipa</p>
+                    <p>Teléfono: (054) 39 1020</p>
+                    <p>Correo: informes@cultural.edu.pe</p>
+                    <p>Horario: Lun - Vie 8am - 8pm</p>
+                    <p>Horario: Sáb 9am - 1pm</p>
+
+                </div>
+            </div>
+        </section>
+    </main>
+
+    <footer role="contentinfo">
+        <p>&copy; 2023 CENTRO CULTURAL PERUANO NORTEAMERICANO</p>
+        <p><a href="mailto:informes@cultural.edu.pe">informes@cultural.edu.pe</a></p>
+    </footer>
+
+    <script>
+        const hamburguesa = document.querySelector('.hamburguesa');
+        const menu = document.querySelector('.menu');
+        hamburguesa.addEventListener('click', () => {
+            menu.classList.toggle('abierto');
+        });
+        document.querySelectorAll('.menu a').forEach(enlace => {
+            enlace.addEventListener('click', () => {
+                menu.classList.remove('abierto');
+            });
+        });
+    </script>
+</body>
+</html>

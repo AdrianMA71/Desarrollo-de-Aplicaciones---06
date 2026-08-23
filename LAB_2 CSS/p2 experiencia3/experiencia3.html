@@ -1,0 +1,89 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Experiencia 3</title>
+    <link rel="stylesheet" href="estilos3.css">
+</head>
+<body>
+
+<!-- parte a: selectores de atributo -->
+
+<h2>PARTE A: SELECTORES DE ATRIBUTO</h2>
+<p>Selecciona elementos por su atributo o valor del atributo</p>
+
+<a href="https://www.google.com">Enlace a Google (href empieza con https)</a>
+<br>
+<a href="documento.pdf">Documento PDF (href termina en .pdf)</a>
+<br>
+<a href="#" class="especial">Enlace con clase especial</a>
+<br>
+<a href="#" target="_blank">Enlace con target blank</a>
+
+<br><br>
+
+<input type="text" placeholder="Texto normal">
+<br>
+<input type="email" placeholder="Correo electronico">
+<br>
+<input type="password" placeholder="Contraseña">
+
+<br><br>
+
+<div data-info="importante">Div con data-info importante</div>
+<div lang="es">Div con idioma español</div>
+
+<hr>
+
+<!-- parte b: pseudo clases -->
+
+<h2>PARTE B: PSEUDO CLASES</h2>
+<p>Selecciona elementos segun su estado o posicion</p>
+
+<button class="btn-hover">Pasa el mouse aqui (hover)</button>
+<br><br>
+<input type="text" class="input-focus" placeholder="Haz clic aqui (focus)">
+<br><br>
+<a href="#" class="enlace-estados">Enlace con estados (visited, hover, active)</a>
+
+<br><br>
+
+<ul class="lista-hijos">
+    <li>Primer hijo (first-child)</li>
+    <li>Segundo hijo</li>
+    <li>Tercer hijo (nth-child 3)</li>
+    <li>Cuarto hijo</li>
+    <li>Quinto hijo</li>
+    <li>Ultimo hijo (last-child)</li>
+</ul>
+
+<br>
+
+<input type="checkbox" class="check-ejemplo"> Marca aqui (checked)
+<br><br>
+<input type="text" class="input-disabled" disabled value="Deshabilitado (disabled)">
+
+<hr>
+
+<!-- parte c: pseudo elementos -->
+
+<h2>PARTE C: PSEUDO ELEMENTOS</h2>
+<p>Selecciona partes especificas de un elemento</p>
+
+<p class="letra-grande">Primera letra grande (first-letter)</p>
+
+<p class="before-after">Texto con decoracion antes y despues (before y after)</p>
+
+<p class="seleccion-color">Selecciona este texto (selection)</p>
+
+<input type="text" class="placeholder-color" placeholder="Placeholder con color">
+
+<ul class="marcador-color">
+    <li>Elemento uno (marker)</li>
+    <li>Elemento dos (marker)</li>
+    <li>Elemento tres (marker)</li>
+</ul>
+
+</body>
+</html>

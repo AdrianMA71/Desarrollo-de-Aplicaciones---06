@@ -1,0 +1,178 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Experiencia 1 - CSS</title>
+    <link rel="stylesheet" href="estilos1.css">
+</head>
+<body>
+
+<!-- parte a: css en linea -->
+
+<h2>PARTE A: CSS EN LINEA</h2>
+<p>Los estilos estan aplicados directamente en cada etiqueta usando style=""</p>
+
+<header style="background-color: #999999; color: black; padding: 20px; text-align: center;">
+    <h1 style="margin: 0;">Mi Pagina de Viajes</h1>
+    <p style="margin: 5px 0 0 0;">Explorando el mundo</p>
+</header>
+
+<nav style="background-color: #bbbbbb; padding: 10px; text-align: center;">
+    <a href="#" style="color: black; margin: 0 15px; text-decoration: none;">Inicio</a>
+    <a href="#" style="color: black; margin: 0 15px; text-decoration: none;">Destinos</a>
+    <a href="#" style="color: black; margin: 0 15px; text-decoration: none;">Galeria</a>
+    <a href="#" style="color: black; margin: 0 15px; text-decoration: none;">Contacto</a>
+</nav>
+
+<main style="max-width: 900px; margin: 20px auto; padding: 0 20px;">
+
+    <section style="padding: 20px; border: 1px solid #ccc; margin-bottom: 20px;">
+        <h2 style="color: black;">Destinos Favoritos</h2>
+        <p style="color: black;">Te comparto algunos de mis destinos favoritos.</p>
+    </section>
+
+    <section style="padding: 20px; border: 1px solid #ccc; margin-bottom: 20px;">
+        <h2 style="color: black;">Top 5 Destinos</h2>
+        <ul style="list-style: none; padding: 0;">
+            <li style="padding: 8px; border-bottom: 1px solid #eee; color: black;">Paris, Francia</li>
+            <li style="padding: 8px; border-bottom: 1px solid #eee; color: black;">Kyoto, Japon</li>
+            <li style="padding: 8px; border-bottom: 1px solid #eee; color: black;">Machu Picchu, Peru</li>
+            <li style="padding: 8px; border-bottom: 1px solid #eee; color: black;">Roma, Italia</li>
+            <li style="padding: 8px; color: black;">Nueva York, EEUU</li>
+        </ul>
+    </section>
+
+    <section style="padding: 20px; border: 1px solid #ccc; margin-bottom: 20px;">
+        <h2 style="color: black;">Contactame</h2>
+        <form>
+            <label style="display: block; font-weight: bold; color: black;">Nombre:</label>
+            <input type="text" placeholder="Tu nombre" style="width: 95%; padding: 8px; margin-bottom: 12px; border: 1px solid #ccc;">
+            <label style="display: block; font-weight: bold; color: black;">Email:</label>
+            <input type="email" placeholder="tu@email.com" style="width: 95%; padding: 8px; margin-bottom: 12px; border: 1px solid #ccc;">
+            <label style="display: block; font-weight: bold; color: black;">Mensaje:</label>
+            <textarea rows="3" placeholder="Escribe tu mensaje..." style="width: 95%; padding: 8px; margin-bottom: 12px; border: 1px solid #ccc;"></textarea>
+            <button style="background-color: #999999; color: black; padding: 10px 25px; border: 1px solid #777;">Enviar</button>
+        </form>
+    </section>
+
+</main>
+
+<footer style="background-color: #999999; color: black; text-align: center; padding: 15px; margin-top: 20px;">
+    <p style="margin: 0;">2025 - CSS en linea</p>
+</footer>
+
+<hr>
+
+<!-- parte b: css en cabecera -->
+
+<h2>PARTE B: CSS EN CABECERA</h2>
+<p>Los estilos estan dentro de la etiqueta style en el head</p>
+
+<header class="header">
+    <h1 class="titulo-header">Mi Pagina de Viajes</h1>
+    <p class="subtitulo-header">Explorando el mundo</p>
+</header>
+
+<nav class="nav">
+    <a href="#" class="enlace">Inicio</a>
+    <a href="#" class="enlace-destino">Destinos</a>
+    <a href="#" class="enlace">Galeria</a>
+    <a href="#" class="enlace">Contacto</a>
+</nav>
+
+<main class="main">
+
+    <section class="seccion">
+        <h2 class="subtitulo">Destinos Favoritos</h2>
+        <p class="texto">Te comparto algunos de mis destinos favoritos.</p>
+    </section>
+
+    <section class="seccion">
+        <h2 class="subtitulo">Top 5 Destinos</h2>
+        <ul class="lista">
+            <li class="item">Paris, Francia</li>
+            <li class="item">Kyoto, Japon</li>
+            <li class="item">Machu Picchu, Peru</li>
+            <li class="item">Roma, Italia</li>
+            <li class="item">Nueva York, EEUU</li>
+        </ul>
+    </section>
+
+    <section class="seccion">
+        <h2 class="subtitulo">Contactame</h2>
+        <form class="formulario">
+            <label class="label">Nombre:</label>
+            <input type="text" class="input" placeholder="Tu nombre">
+            <label class="label">Email:</label>
+            <input type="email" class="input" placeholder="tu@email.com">
+            <label class="label">Mensaje:</label>
+            <textarea class="textarea" rows="3" placeholder="Escribe tu mensaje..."></textarea>
+            <button class="btn">Enviar</button>
+        </form>
+    </section>
+
+</main>
+
+<footer class="footer">
+    <p class="footer-texto">2025 - CSS en cabecera</p>
+</footer>
+
+<hr>
+
+<!-- parte c: css vinculado -->
+
+<h2>PARTE C: CSS VINCULADO</h2>
+<p>Los estilos estan en un archivo externo llamado estilos1.css</p>
+
+<header class="header-v">
+    <h1 class="titulo-header-v">Mi Pagina de Viajes</h1>
+    <p class="subtitulo-header-v">Explorando el mundo</p>
+</header>
+
+<nav class="nav-v">
+    <a href="#" class="enlace-v">Inicio</a>
+    <a href="#" class="enlace-destino-v">Destinos</a>
+    <a href="#" class="enlace-v">Galeria</a>
+    <a href="#" class="enlace-v">Contacto</a>
+</nav>
+
+<main class="main-v">
+
+    <section class="seccion-v">
+        <h2 class="subtitulo-v">Destinos Favoritos</h2>
+        <p class="texto-v">Te comparto algunos de mis destinos favoritos.</p>
+    </section>
+
+    <section class="seccion-v">
+        <h2 class="subtitulo-v">Top 5 Destinos</h2>
+        <ul class="lista-v">
+            <li class="item-v">Paris, Francia</li>
+            <li class="item-v">Kyoto, Japon</li>
+            <li class="item-v">Machu Picchu, Peru</li>
+            <li class="item-v">Roma, Italia</li>
+            <li class="item-v">Nueva York, EEUU</li>
+        </ul>
+    </section>
+
+    <section class="seccion-v">
+        <h2 class="subtitulo-v">Contactame</h2>
+        <form class="formulario-v">
+            <label class="label-v">Nombre:</label>
+            <input type="text" class="input-v" placeholder="Tu nombre">
+            <label class="label-v">Email:</label>
+            <input type="email" class="input-v" placeholder="tu@email.com">
+            <label class="label-v">Mensaje:</label>
+            <textarea class="textarea-v" rows="3" placeholder="Escribe tu mensaje..."></textarea>
+            <button class="btn-v">Enviar</button>
+        </form>
+    </section>
+
+</main>
+
+<footer class="footer-v">
+    <p class="footer-texto-v">2025 - CSS vinculado</p>
+</footer>
+
+</body>
+</html>

@@ -1,0 +1,248 @@
+/* parte b: css en cabecera */
+
+/* header */
+.header {
+    background-color: #999999;
+    color: black;
+    padding: 20px;
+    text-align: center;
+}
+
+.titulo-header {
+    margin: 0;
+    font-size: 40px;
+    color: black;
+}
+
+.subtitulo-header {
+    margin: 5px 0 0 0;
+    color: black;
+}
+
+/* navegacion */
+.nav {
+    background-color: #bbbbbb;
+    padding: 10px;
+    text-align: center;
+}
+
+.enlace {
+    color: black;
+    margin: 0 15px;
+    text-decoration: none;
+}
+
+.enlace-destino {
+    color: black;
+    margin: 0 15px;
+    text-decoration: none;
+}
+
+/* contenido principal */
+.main {
+    max-width: 900px;
+    margin: 20px auto;
+    padding: 0 20px;
+}
+
+/* secciones */
+.seccion {
+    padding: 20px;
+    border: 1px solid #ccc;
+    margin-bottom: 20px;
+}
+
+.subtitulo {
+    color: black;
+}
+
+.texto {
+    color: black;
+}
+
+/* lista */
+.lista {
+    list-style: none;
+    padding: 0;
+}
+
+.item {
+    padding: 8px;
+    border-bottom: 1px solid #eee;
+    color: black;
+}
+
+.item:last-child {
+    border-bottom: none;
+}
+
+/* formulario */
+.formulario {
+    padding: 0;
+}
+
+.label {
+    display: block;
+    font-weight: bold;
+    color: black;
+}
+
+.input, .textarea {
+    width: 95%;
+    padding: 8px;
+    margin-bottom: 12px;
+    border: 1px solid #ccc;
+    color: black;
+}
+
+.textarea {
+    resize: vertical;
+}
+
+.btn {
+    background-color: #999999;
+    color: black;
+    padding: 10px 25px;
+    border: 1px solid #777;
+}
+
+/* footer */
+.footer {
+    background-color: #999999;
+    color: black;
+    text-align: center;
+    padding: 15px;
+    margin-top: 20px;
+}
+
+.footer-texto {
+    margin: 0;
+    color: black;
+}
+
+hr {
+    border: 1px dashed #aaa;
+    margin: 40px 0;
+}
+
+/* parte c: css vinculado */
+
+/* header */
+.header-v {
+    background-color: #999999;
+    color: black;
+    padding: 20px;
+    text-align: center;
+}
+
+.titulo-header-v {
+    margin: 0;
+    font-size: 40px;
+    color: black;
+}
+
+.subtitulo-header-v {
+    margin: 5px 0 0 0;
+    color: black;
+}
+
+/* navegacion */
+.nav-v {
+    background-color: #bbbbbb;
+    padding: 10px;
+    text-align: center;
+}
+
+.enlace-v {
+    color: black;
+    margin: 0 15px;
+    text-decoration: none;
+}
+
+.enlace-destino-v {
+    color: black;
+    margin: 0 15px;
+    text-decoration: none;
+}
+
+/* contenido principal */
+.main-v {
+    max-width: 900px;
+    margin: 20px auto;
+    padding: 0 20px;
+}
+
+/* secciones */
+.seccion-v {
+    padding: 20px;
+    border: 1px solid #ccc;
+    margin-bottom: 20px;
+}
+
+.subtitulo-v {
+    color: black;
+}
+
+.texto-v {
+    color: black;
+}
+
+/* lista */
+.lista-v {
+    list-style: none;
+    padding: 0;
+}
+
+.item-v {
+    padding: 8px;
+    border-bottom: 1px solid #eee;
+    color: black;
+}
+
+.item-v:last-child {
+    border-bottom: none;
+}
+
+/* formulario */
+.formulario-v {
+    padding: 0;
+}
+
+.label-v {
+    display: block;
+    font-weight: bold;
+    color: black;
+}
+
+.input-v, .textarea-v {
+    width: 95%;
+    padding: 8px;
+    margin-bottom: 12px;
+    border: 1px solid #ccc;
+    color: black;
+}
+
+.textarea-v {
+    resize: vertical;
+}
+
+.btn-v {
+    background-color: #999999;
+    color: black;
+    padding: 10px 25px;
+    border: 1px solid #777;
+}
+
+/* footer */
+.footer-v {
+    background-color: #999999;
+    color: black;
+    text-align: center;
+    padding: 15px;
+    margin-top: 20px;
+}
+
+.footer-texto-v {
+    margin: 0;
+    color: black;
+}

@@ -1,0 +1,147 @@
+/* parte a: selectores combinados y multiples */
+
+/* combinado 1: descendiente (espacio) */
+.padre p {
+    background-color: #ecf0f1;
+    padding: 10px;
+    border-radius: 5px;
+}
+
+/* combinado 2: hijo directo (>) */
+.contenedor > p {
+    border: 3px solid #3498db;
+    padding: 10px;
+    border-radius: 5px;
+    color: #3498db;
+    font-weight: bold;
+}
+
+/* combinado 3: adyacente (+) */
+.titulo-adyacente + p {
+    background-color: #f1c40f;
+    padding: 10px;
+    border-radius: 5px;
+    color: #e74c3c;
+    font-weight: bold;
+}
+
+/* combinado 4: hermanos (~) */
+.titulo-hermanos ~ p {
+    color: #e74c3c;
+    padding: 10px;
+    border-radius: 5px;
+    font-weight: bold;
+}
+
+/* multiple 1: agrupados con coma */
+div.multiples, p.multiples, span.multiples {
+    color: #2c3e50;
+    font-weight: bold;
+    padding: 10px;
+    margin: 5px 0;
+    border-radius: 5px;
+}
+
+/* multiple 2: p y span dentro de contenedor */
+.contenedor-multiples p, 
+.contenedor-multiples span {
+    color: #ffffff;
+    background-color: #3498db;
+    font-weight: bold;
+    padding: 5px;
+    margin: 3px 0;
+    border-radius: 5px;
+    display: block;
+}
+
+hr {
+    border: 2px dashed #2c3e50;
+    margin: 40px 0;
+}
+
+/* parte b: selectores regex */
+
+/* regex 1: empieza con https */
+a[href^="https"] {
+    color: #e74c3c;
+    font-weight: bold;
+}
+
+/* regex 2: termina en .pdf */
+a[href$=".pdf"] {
+    color: #3498db;
+    font-weight: bold;
+}
+
+/* regex 3: contiene google */
+a[href*="google"] {
+    color: #f39c12;
+    font-size: 20px;
+    font-weight: bold;
+}
+
+/* parte c: herencia y cascada */
+
+/* herencia 1: color */
+.padre-herencia {
+    color: #3498db;
+    font-weight: bold;
+}
+
+/* herencia 2: text-align */
+.padre-centrado {
+    text-align: center;
+    font-weight: bold;
+}
+
+/* herencia 3: font-family */
+.padre-fuente {
+    font-family: "Times New Roman", serif;
+    font-weight: bold;
+}
+
+/* contraste: borde no se hereda */
+.padre-borde {
+    border: 4px solid #e74c3c;
+    padding: 10px;
+    border-radius: 5px;
+}
+
+.padre-borde p {
+    font-weight: bold;
+}
+
+/* cascada 1: id gana a clase */
+.texto-cascada {
+    color: #3498db;
+    font-weight: normal;
+}
+
+#texto-especial {
+    color: #e74c3c;
+    font-weight: bold;
+}
+
+/* cascada 2: clase gana a etiqueta */
+p {
+    color: #2c3e50;
+    font-size: 14px;
+}
+
+.texto-clase {
+    color: #f39c12;
+    font-size: 22px;
+    font-weight: bold;
+}
+
+/* cascada 3: orden - ultimo gana */
+.orden-ultimo {
+    color: #2c3e50;
+    font-size: 14px;
+}
+
+.orden-ultimo {
+    color: #e74c3c;
+    font-size: 22px;
+    font-weight: bold;
+}

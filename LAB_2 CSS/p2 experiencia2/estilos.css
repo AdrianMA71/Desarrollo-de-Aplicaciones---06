@@ -1,0 +1,319 @@
+/* parte a: selectores por nombre */
+
+header {
+    background-color: #999999;
+    color: black;
+    padding: 20px;
+    text-align: center;
+}
+
+h1 {
+    margin: 0;
+    font-size: 40px;
+    color: black;
+}
+
+header p {
+    margin: 5px 0 0 0;
+    color: black;
+}
+
+nav {
+    background-color: #bbbbbb;
+    padding: 10px;
+    text-align: center;
+}
+
+nav a {
+    color: black;
+    margin: 0 15px;
+    text-decoration: none;
+}
+
+main {
+    max-width: 900px;
+    margin: 20px auto;
+    padding: 0 20px;
+}
+
+section {
+    padding: 20px;
+    border: 1px solid #ccc;
+    margin-bottom: 20px;
+}
+
+h2 {
+    color: black;
+}
+
+section p {
+    color: black;
+}
+
+ul {
+    list-style: none;
+    padding: 0;
+}
+
+li {
+    padding: 8px;
+    border-bottom: 1px solid #eee;
+    color: black;
+}
+
+li:last-child {
+    border-bottom: none;
+}
+
+label {
+    display: block;
+    font-weight: bold;
+    color: black;
+}
+
+input, textarea {
+    width: 95%;
+    padding: 8px;
+    margin-bottom: 12px;
+    border: 1px solid #ccc;
+    color: black;
+}
+
+textarea {
+    resize: vertical;
+}
+
+button {
+    background-color: #999999;
+    color: black;
+    padding: 10px 25px;
+    border: 1px solid #777;
+}
+
+footer {
+    background-color: #999999;
+    color: black;
+    text-align: center;
+    padding: 15px;
+    margin-top: 20px;
+}
+
+footer p {
+    margin: 0;
+    color: black;
+}
+
+hr {
+    border: 1px dashed #aaa;
+    margin: 40px 0;
+}
+
+/* parte b: selectores por clase */
+
+.header-b {
+    background-color: #999999;
+    color: black;
+    padding: 20px;
+    text-align: center;
+}
+
+.titulo-header-b {
+    margin: 0;
+    font-size: 40px;
+    color: black;
+}
+
+.subtitulo-header-b {
+    margin: 5px 0 0 0;
+    color: black;
+}
+
+.nav-b {
+    background-color: #bbbbbb;
+    padding: 10px;
+    text-align: center;
+}
+
+.enlace-b {
+    color: black;
+    margin: 0 15px;
+    text-decoration: none;
+}
+
+.main-b {
+    max-width: 900px;
+    margin: 20px auto;
+    padding: 0 20px;
+}
+
+.seccion-b {
+    padding: 20px;
+    border: 1px solid #ccc;
+    margin-bottom: 20px;
+}
+
+.subtitulo-b {
+    color: black;
+}
+
+.texto-b {
+    color: black;
+}
+
+.lista-b {
+    list-style: none;
+    padding: 0;
+}
+
+.item-b {
+    padding: 8px;
+    border-bottom: 1px solid #eee;
+    color: black;
+}
+
+.item-b:last-child {
+    border-bottom: none;
+}
+
+.label-b {
+    display: block;
+    font-weight: bold;
+    color: black;
+}
+
+.input-b, .textarea-b {
+    width: 95%;
+    padding: 8px;
+    margin-bottom: 12px;
+    border: 1px solid #ccc;
+    color: black;
+}
+
+.textarea-b {
+    resize: vertical;
+}
+
+.btn-b {
+    background-color: #999999;
+    color: black;
+    padding: 10px 25px;
+    border: 1px solid #777;
+}
+
+.footer-b {
+    background-color: #999999;
+    color: black;
+    text-align: center;
+    padding: 15px;
+    margin-top: 20px;
+}
+
+.footer-texto-b {
+    margin: 0;
+    color: black;
+}
+
+/* parte c: selectores por id */
+
+#header-c {
+    background-color: #999999;
+    color: black;
+    padding: 20px;
+    text-align: center;
+}
+
+#titulo-header-c {
+    margin: 0;
+    font-size: 40px;
+    color: black;
+}
+
+#subtitulo-header-c {
+    margin: 5px 0 0 0;
+    color: black;
+}
+
+#nav-c {
+    background-color: #bbbbbb;
+    padding: 10px;
+    text-align: center;
+}
+
+#enlace-inicio-c, #enlace-destino-c, #enlace-galeria-c, #enlace-contacto-c {
+    color: black;
+    margin: 0 15px;
+    text-decoration: none;
+}
+
+#main-c {
+    max-width: 900px;
+    margin: 20px auto;
+    padding: 0 20px;
+}
+
+#seccion-1-c, #seccion-2-c, #seccion-3-c {
+    padding: 20px;
+    border: 1px solid #ccc;
+    margin-bottom: 20px;
+}
+
+#subtitulo-1-c, #subtitulo-2-c, #subtitulo-3-c {
+    color: black;
+}
+
+#texto-1-c {
+    color: black;
+}
+
+#lista-c {
+    list-style: none;
+    padding: 0;
+}
+
+#item-1-c, #item-2-c, #item-3-c, #item-4-c, #item-5-c {
+    padding: 8px;
+    border-bottom: 1px solid #eee;
+    color: black;
+}
+
+#item-5-c {
+    border-bottom: none;
+}
+
+#label-nombre-c, #label-email-c, #label-mensaje-c {
+    display: block;
+    font-weight: bold;
+    color: black;
+}
+
+#input-nombre-c, #input-email-c, #textarea-mensaje-c {
+    width: 95%;
+    padding: 8px;
+    margin-bottom: 12px;
+    border: 1px solid #ccc;
+    color: black;
+}
+
+#textarea-mensaje-c {
+    resize: vertical;
+}
+
+#btn-enviar-c {
+    background-color: #999999;
+    color: black;
+    padding: 10px 25px;
+    border: 1px solid #777;
+}
+
+#footer-c {
+    background-color: #999999;
+    color: black;
+    text-align: center;
+    padding: 15px;
+    margin-top: 20px;
+}
+
+#footer-texto-c {
+    margin: 0;
+    color: black;
+}

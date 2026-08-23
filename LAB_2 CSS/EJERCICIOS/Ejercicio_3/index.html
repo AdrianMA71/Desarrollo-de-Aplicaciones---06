@@ -1,0 +1,72 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Cultural - Inicio</title>
+    <link rel="stylesheet" href="estilos.css">
+</head>
+<body>
+    <header>
+        <div class="contenedor">
+            <div class="logo">
+                <img src="imagenes/logo.png" alt="Logo Cultural">
+            </div>
+            <button class="hamburguesa" aria-label="Menú">
+                <span></span>
+                <span></span>
+                <span></span>
+            </button>
+            <nav>
+                <ul class="menu">
+                    <li><a href="index.html" class="activo">Inicio</a></li>
+                    <li><a href="programas.html">Programas</a></li>
+                    <li><a href="contacto.html">Contacto</a></li>
+                </ul>
+            </nav>
+        </div>
+    </header>
+
+    <main>
+        <section class="hero">
+            <div class="hero-contenido">
+                <h1>Cultural</h1>
+                <p>Una experiencia diferente</p>
+                <ul class="lista">
+                    <li>+Inglés</li>
+                    <li>+Oportunidades</li>
+                    <li>+Cultura</li>
+                </ul>
+                <a href="programas.html" class="btn">Ver programas</a>
+            </div>
+            <div class="hero-imagen">
+                <img src="imagenes/banner.png" alt="Estudiantes de inglés">
+            </div>
+        </section>
+
+        <section class="institucional">
+            <h2>Centro Cultural Peruano Norteamericano</h2>
+            <p>Consolidados como una institución promotora de la cultura y como centro de alto nivel en la enseñanza de inglés.</p>
+            <p>Manteniendo y mejorando nuestra calidad educativa, hemos visto pasar por nuestros pasillos a muchas generaciones que recuerdan con felicidad sus años de preparación.</p>
+        </section>
+    </main>
+
+    <footer>
+        <p>&copy; 2023 CENTRO CULTURAL PERUANO NORTEAMERICANO</p>
+        <p><a href="mailto:informes@cultural.edu.pe">informes@cultural.edu.pe</a></p>
+    </footer>
+
+    <script>
+        const hamburguesa = document.querySelector('.hamburguesa');
+        const menu = document.querySelector('.menu');
+        hamburguesa.addEventListener('click', () => {
+            menu.classList.toggle('abierto');
+        });
+        document.querySelectorAll('.menu a').forEach(enlace => {
+            enlace.addEventListener('click', () => {
+                menu.classList.remove('abierto');
+            });
+        });
+    </script>
+</body>
+</html>

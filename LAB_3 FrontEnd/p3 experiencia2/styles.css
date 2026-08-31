@@ -1,0 +1,325 @@
+
+* {
+  box-sizing: border-box;
+}
+
+html {
+  scroll-behavior: smooth;
+}
+
+body {
+  margin: 0;
+  font-family: arial, helvetica, sans-serif;
+  color: #17324d;
+  background: #f7fafc;
+}
+
+/* ==================== header ==================== */
+/* aplicando flexbox al header */
+.header {
+  display: flex;                  /* nuevo: contenedor flex */
+  justify-content: space-between; /* distribuye elementos a los extremos */
+  align-items: center;            /* centra verticalmente */
+  width: 100%;
+  max-width: 1180px;
+  margin: 0 auto;
+  padding: 16px 28px;
+  background: #ffffff;
+  border-bottom: 1px solid #d9e2ec;
+}
+
+.logo {
+  color: #0a4f88;
+  font-size: 1.65rem;
+  font-weight: 800;
+  text-decoration: none;
+}
+
+/* ==================== nav ==================== */
+/* aplicando flexbox a la navegación */
+.nav {
+  display: flex;                  /* nuevo: contenedor flex */
+  gap: 1.5rem;                    /* separación entre enlaces */
+  flex-wrap: wrap;                /* permite que los enlaces bajen */
+}
+
+.nav a {
+  color: #17324d;
+  font-weight: 700;
+  text-decoration: none;
+}
+
+.nav a:hover {
+  color: #168f7a;
+}
+
+/* ==================== hero ==================== */
+/* aplicando flexbox al hero */
+.hero {
+  display: flex;                  /* nuevo: contenedor flex */
+  flex-direction: row;            /* dirección horizontal */
+  align-items: center;            /* centra verticalmente */
+  gap: 3rem;                      /* separación entre texto e imagen */
+  width: 100%;
+  max-width: 1180px;
+  margin: 0 auto;
+  padding: 50px 28px 70px;
+  flex-wrap: wrap;                /* permite que bajen en móvil */
+}
+
+/* ==================== hero texto ==================== */
+/* aplicando flexibilidad al texto */
+.hero__texto {
+  flex: 1 1 0;                    /* nuevo: crece, se encoge, base 0 */
+  max-width: 510px;
+  min-width: 280px;
+}
+
+.etiqueta,
+.seccion-titulo > span {
+  color: #168f7a;
+  font-size: 0.78rem;
+  font-weight: 800;
+  letter-spacing: 0.08em;
+}
+
+.hero h1 {
+  margin: 16px 0 20px;
+  font-size: clamp(2rem, 5vw, 58px);
+  line-height: 1.1;
+  color: #0b3562;
+}
+
+.hero p,
+.seccion-titulo p,
+.proyectos p {
+  line-height: 1.7;
+  color: #52667a;
+}
+
+/* ==================== acciones (botones) ==================== */
+/* aplicando flexbox a los botones */
+.acciones {
+  display: flex;                  /* nuevo: contenedor flex */
+  gap: 1rem;                      /* separación entre botones */
+  flex-wrap: wrap;                /* permite que los botones bajen */
+  margin-top: 30px;
+}
+
+/* ==================== botones ==================== */
+.boton {
+  min-width: 140px;
+  padding: 14px 20px;
+  text-align: center;
+  text-decoration: none;
+  font-weight: 800;
+  border-radius: 8px;
+}
+
+.boton--principal {
+  color: white;
+  background: #168f7a;
+}
+
+.boton--secundario {
+  color: #0b3562;
+  background: white;
+  border: 2px solid #0b3562;
+}
+
+/* ==================== hero imagen ==================== */
+/* aplicando flexibilidad a la imagen */
+.hero__imagen {
+  flex: 1 1 0;                    /* nuevo: crece, se encoge, base 0 */
+  max-width: 600px;
+  min-width: 280px;
+}
+
+/* ==================== imagen ==================== */
+/* corrigiendo la imagen rígida */
+.hero__imagen img {
+  width: 100%;
+  max-width: 100%;                /* antes: width: 680px (rígido) */
+  height: auto;                   /* antes: height: 430px (fijo) */
+  object-fit: cover;
+  display: block;
+  border-radius: 18px;
+  box-shadow: 0 18px 50px rgba(24, 68, 108, 0.18);
+}
+
+/* ==================== servicios ==================== */
+.servicios {
+  width: 100%;
+  max-width: 1180px;
+  margin: 0 auto;
+  padding: 60px 28px 80px;
+}
+
+/* ==================== sección título ==================== */
+.seccion-titulo {
+  width: 100%;
+  max-width: 620px;
+  margin-bottom: 36px;
+}
+
+.seccion-titulo h2,
+.proyectos h2 {
+  margin: 10px 0 12px;
+  font-size: 2.4rem;
+  color: #0b3562;
+}
+
+/* ==================== tarjetas ==================== */
+.tarjetas {
+  display: flex;
+  gap: 24px;
+  flex-wrap: wrap;
+  justify-content: center;
+}
+
+/* ==================== tarjeta ==================== */
+.tarjeta {
+  max-width: 377px;
+  flex: 1 1 280px;
+  min-width: 250px;
+  padding: 28px;
+  background: white;
+  border: 1px solid #dce5ee;
+  border-radius: 14px;
+}
+
+.tarjeta__icono {
+  width: 48px;
+  height: 48px;
+  display: grid;
+  place-items: center;
+  margin-bottom: 28px;
+  color: white;
+  font-weight: 800;
+  background: #0a5ea8;
+  border-radius: 12px;
+}
+
+.tarjeta h3 {
+  font-size: 1.3rem;
+  color: #0b3562;
+}
+
+.tarjeta p {
+  min-height: 78px;
+  line-height: 1.6;
+  color: #60758a;
+}
+
+.tarjeta a {
+  color: #168f7a;
+  font-weight: 800;
+}
+
+/* ==================== proyectos ==================== */
+.proyectos {
+  position: relative;
+  width: 100%;
+  max-width: 1180px;
+  margin: 0 auto 80px;
+  padding: 40px 28px;
+  background: #eaf6f3;
+  border-radius: 20px;
+}
+
+/* ==================== dato ==================== */
+.dato {
+  position: relative;
+  width: 100%;
+  max-width: 400px;
+  margin-top: 20px;
+  padding: 36px;
+  color: white;
+  background: #0b3562;
+  border-radius: 16px;
+}
+
+.dato strong {
+  display: block;
+  margin-bottom: 10px;
+  font-size: 3.2rem;
+}
+
+.dato span {
+  line-height: 1.5;
+}
+
+/* ==================== ayuda ==================== */
+.ayuda {
+  position: fixed;
+  right: 16px;
+  bottom: 16px;
+  z-index: 10;
+  width: 60px;
+  height: 60px;
+  color: white;
+  font-size: 1.5rem;
+  font-weight: 900;
+  background: #168f7a;
+  border: 0;
+  border-radius: 50%;
+  box-shadow: 0 10px 28px rgba(0, 0, 0, 0.18);
+  cursor: pointer;
+}
+
+/* ==================== footer ==================== */
+.footer {
+  width: 100%;
+  max-width: 1180px;
+  margin: 0 auto;
+  padding: 28px;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  gap: 12px;
+  color: #dbe8f3;
+  background: #0b3562;
+}
+
+/* ==================== media query - tablet ==================== */
+@media (min-width: 768px) {
+
+  .header {
+    padding: 0 28px;
+  }
+
+  .footer {
+    flex-direction: row;
+    justify-content: space-between;
+    align-items: center;
+  }
+
+  .proyectos {
+    padding: 52px 430px 52px 52px;
+  }
+
+  .dato {
+    position: absolute;
+    top: 52px;
+    right: -40px;
+    width: 380px;
+    margin-top: 0;
+  }
+}
+
+/* ==================== media query - desktop ==================== */
+@media (min-width: 1024px) {
+
+  .dato {
+    right: -30px;
+    width: 400px;
+  }
+
+  .hero {
+    padding: 70px 0;
+  }
+
+  .servicios {
+    padding: 70px 0 90px;
+  }
+}

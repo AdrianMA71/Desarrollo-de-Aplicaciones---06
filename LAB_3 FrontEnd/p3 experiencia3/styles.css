@@ -1,0 +1,403 @@
+* {
+  box-sizing: border-box;
+}
+
+html {
+  scroll-behavior: smooth;
+}
+
+body {
+  margin: 0;
+  font-family: arial, helvetica, sans-serif;
+  color: #17324d;
+  background: #f7fafc;
+}
+
+/* ==================== header ==================== */
+.header {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  width: 100%;
+  max-width: 1180px;
+  margin: 0 auto;
+  padding: 16px 28px;
+  background: #ffffff;
+  border-bottom: 1px solid #d9e2ec;
+}
+
+.logo {
+  color: #0a4f88;
+  font-size: 1.65rem;
+  font-weight: 800;
+  text-decoration: none;
+}
+
+/* ==================== nav ==================== */
+.nav {
+  display: flex;
+  gap: 1.5rem;
+  flex-wrap: wrap;
+}
+
+.nav a {
+  color: #17324d;
+  font-weight: 700;
+  text-decoration: none;
+}
+
+.nav a:hover {
+  color: #168f7a;
+}
+
+/* ==================== hero ==================== */
+.hero {
+  display: flex;
+  flex-direction: row;
+  align-items: center;
+  gap: 3rem;
+  width: 100%;
+  max-width: 1180px;
+  margin: 0 auto;
+  padding: 50px 28px 70px;
+  flex-wrap: wrap;
+}
+
+.hero__texto {
+  flex: 1 1 0;
+  max-width: 510px;
+  min-width: 280px;
+}
+
+.etiqueta,
+.seccion-titulo > span {
+  color: #168f7a;
+  font-size: 0.78rem;
+  font-weight: 800;
+  letter-spacing: 0.08em;
+}
+
+.hero h1 {
+  margin: 16px 0 20px;
+  font-size: clamp(2rem, 5vw, 58px);
+  line-height: 1.1;
+  color: #0b3562;
+}
+
+.hero p,
+.seccion-titulo p,
+.proyectos p {
+  line-height: 1.7;
+  color: #52667a;
+}
+
+/* ==================== acciones ==================== */
+.acciones {
+  display: flex;
+  gap: 1rem;
+  flex-wrap: wrap;
+  margin-top: 30px;
+}
+
+/* ==================== botones ==================== */
+.boton {
+  min-width: 140px;
+  padding: 14px 20px;
+  text-align: center;
+  text-decoration: none;
+  font-weight: 800;
+  border-radius: 8px;
+}
+
+.boton--principal {
+  color: white;
+  background: #168f7a;
+}
+
+.boton--secundario {
+  color: #0b3562;
+  background: white;
+  border: 2px solid #0b3562;
+}
+
+/* ==================== hero imagen ==================== */
+.hero__imagen {
+  flex: 1 1 0;
+  max-width: 600px;
+  min-width: 280px;
+}
+
+.hero__imagen img {
+  width: 100%;
+  max-width: 100%;
+  height: auto;
+  object-fit: cover;
+  display: block;
+  border-radius: 18px;
+  box-shadow: 0 18px 50px rgba(24, 68, 108, 0.18);
+}
+
+/* ==================== servicios ==================== */
+.servicios {
+  width: 100%;
+  max-width: 1180px;
+  margin: 0 auto;
+  padding: 60px 28px 80px;
+}
+
+.seccion-titulo {
+  width: 100%;
+  max-width: 620px;
+  margin-bottom: 36px;
+}
+
+.seccion-titulo h2,
+.proyectos h2,
+.layout-demo h2 {
+  margin: 10px 0 12px;
+  font-size: 2.4rem;
+  color: #0b3562;
+}
+
+
+.tarjetas {
+  display: grid;                          /* antes: display: flex */
+  grid-template-columns: repeat(auto-fit, minmax(240px, 1fr)); /* catálogo flexible */
+  gap: 24px;
+  /* flex-wrap y justify-content ya no son necesarios en grid */
+}
+
+.tarjeta {
+  /* width y flex eliminados - grid controla el espacio */
+  padding: 28px;
+  background: white;
+  border: 1px solid #dce5ee;
+  border-radius: 14px;
+
+  /* flexbox interno para organizar el contenido de cada tarjeta */
+  display: flex;
+  flex-direction: column;        /* apila los elementos verticalmente */
+}
+
+/* ==================== tarjeta destacada ==================== */
+/* cambio: ocupa 2 columnas en pantallas grandes */
+.tarjeta--destacada {
+  grid-column: span 2;           /* ocupa 2 columnas */
+}
+
+/* ==================== tarjeta botón ==================== */
+/* cambio: margin-top: auto empuja el botón hacia abajo */
+.tarjeta__boton {
+  margin-top: auto;              /* empuja el botón al final de la tarjeta */
+  color: #168f7a;
+  font-weight: 800;
+  text-decoration: none;
+}
+
+.tarjeta__icono {
+  width: 48px;
+  height: 48px;
+  display: grid;
+  place-items: center;
+  margin-bottom: 28px;
+  color: white;
+  font-weight: 800;
+  background: #0a5ea8;
+  border-radius: 12px;
+}
+
+.tarjeta h3 {
+  font-size: 1.3rem;
+  color: #0b3562;
+  margin: 0 0 12px 0;
+}
+
+.tarjeta p {
+  line-height: 1.6;
+  color: #60758a;
+  margin: 0 0 20px 0;
+  flex: 1;                       /* ocupa el espacio disponible */
+}
+
+/* ==================== layout demo - áreas de grid ==================== */
+/* nuevo: sección para demostrar grid-template-areas */
+.layout-demo {
+  width: 100%;
+  max-width: 1180px;
+  margin: 0 auto 80px;
+  padding: 0 28px;
+}
+
+.layout-grid {
+  display: grid;
+  grid-template-areas:
+    "header header"
+    "aside main"
+    "extra main"
+    "footer footer";
+  gap: 16px;
+  min-height: 400px;
+}
+
+.layout-grid > * {
+  padding: 20px;
+  background: #eaf6f3;
+  border-radius: 12px;
+  font-weight: 700;
+  text-align: center;
+}
+
+.layout-header {
+  grid-area: header;
+  background: #0b3562;
+  color: white;
+}
+
+.layout-aside {
+  grid-area: aside;
+  background: #168f7a;
+  color: white;
+}
+
+.layout-main {
+  grid-area: main;
+  background: #d9e2ec;
+  min-height: 200px;
+}
+
+.layout-extra {
+  grid-area: extra;
+  background: #0a5ea8;
+  color: white;
+}
+
+.layout-footer {
+  grid-area: footer;
+  background: #0b3562;
+  color: white;
+}
+
+/* ==================== proyectos ==================== */
+.proyectos {
+  position: relative;
+  width: 100%;
+  max-width: 1180px;
+  margin: 0 auto 80px;
+  padding: 40px 28px;
+  background: #eaf6f3;
+  border-radius: 20px;
+}
+
+.dato {
+  position: relative;
+  width: 100%;
+  max-width: 400px;
+  margin-top: 20px;
+  padding: 36px;
+  color: white;
+  background: #0b3562;
+  border-radius: 16px;
+}
+
+.dato strong {
+  display: block;
+  margin-bottom: 10px;
+  font-size: 3.2rem;
+}
+
+.dato span {
+  line-height: 1.5;
+}
+
+/* ==================== ayuda ==================== */
+.ayuda {
+  position: fixed;
+  right: 16px;
+  bottom: 16px;
+  z-index: 10;
+  width: 60px;
+  height: 60px;
+  color: white;
+  font-size: 1.5rem;
+  font-weight: 900;
+  background: #168f7a;
+  border: 0;
+  border-radius: 50%;
+  box-shadow: 0 10px 28px rgba(0, 0, 0, 0.18);
+  cursor: pointer;
+}
+
+/* ==================== footer ==================== */
+.footer {
+  width: 100%;
+  max-width: 1180px;
+  margin: 0 auto;
+  padding: 28px;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  gap: 12px;
+  color: #dbe8f3;
+  background: #0b3562;
+}
+
+/* ==================== media query - tablet ==================== */
+@media (min-width: 768px) {
+
+  .header {
+    padding: 0 28px;
+  }
+
+  .footer {
+    flex-direction: row;
+    justify-content: space-between;
+    align-items: center;
+  }
+
+  .proyectos {
+    padding: 52px 430px 52px 52px;
+  }
+
+  .dato {
+    position: absolute;
+    top: 52px;
+    right: -40px;
+    width: 380px;
+    margin-top: 0;
+  }
+
+  /* cambio: tarjeta destacada ocupa 2 columnas en tablet */
+  .tarjeta--destacada {
+    grid-column: span 2;
+  }
+}
+
+/* ==================== media query - desktop ==================== */
+@media (min-width: 1024px) {
+
+  .dato {
+    right: -30px;
+    width: 400px;
+  }
+
+  .hero {
+    padding: 70px 0;
+  }
+
+  .servicios {
+    padding: 70px 0 90px;
+  }
+
+  /* cambio: grid con más columnas en desktop */
+  .tarjetas {
+    grid-template-columns: repeat(auto-fit, minmax(280px, 1fr));
+  }
+}
+
+/* ==================== media query - móvil (tarjeta destacada) ==================== */
+/* cambio: en móvil la tarjeta destacada no ocupa 2 columnas */
+@media (max-width: 767px) {
+  .tarjeta--destacada {
+    grid-column: auto;           /* comportamiento normal en móvil */
+  }
+}

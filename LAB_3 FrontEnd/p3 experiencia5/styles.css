@@ -1,0 +1,470 @@
+
+* {
+  box-sizing: border-box;
+}
+
+html {
+  scroll-behavior: smooth;
+}
+
+body {
+  margin: 0;
+  font-family: arial, helvetica, sans-serif;
+  color: #17324d;
+  background: #f7fafc;
+}
+
+/* ==================== header ==================== */
+.header {
+  display: flex;
+  flex-direction: column;
+  align-items: flex-start;
+  gap: 12px;
+  width: 100%;
+  max-width: 1180px;
+  margin: 0 auto;
+  padding: 16px 28px;
+  background: #ffffff;
+  border-bottom: 1px solid #d9e2ec;
+}
+
+.logo {
+  color: #0a4f88;
+  font-size: 1.65rem;
+  font-weight: 800;
+  text-decoration: none;
+}
+
+/* ==================== nav ==================== */
+.nav {
+  display: flex;
+  flex-direction: column;
+  gap: 0.5rem;
+  width: 100%;
+}
+
+.nav a {
+  color: #17324d;
+  font-weight: 700;
+  text-decoration: none;
+  padding: 4px 0;
+}
+
+.nav a:hover {
+  color: #168f7a;
+}
+
+/* ==================== hero ==================== */
+.hero {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  gap: 2rem;
+  width: 100%;
+  max-width: 1180px;
+  margin: 0 auto;
+  padding: 40px 28px 50px;
+}
+
+.hero__texto {
+  width: 100%;
+  max-width: 510px;
+}
+
+.etiqueta,
+.seccion-titulo > span {
+  color: #168f7a;
+  font-size: 0.78rem;
+  font-weight: 800;
+  letter-spacing: 0.08em;
+}
+
+.hero h1 {
+  margin: 16px 0 20px;
+  font-size: clamp(2.2rem, 5vw, 4rem);
+  line-height: 1.1;
+  color: #0b3562;
+}
+
+.hero p,
+.seccion-titulo p,
+.proyectos p {
+  line-height: 1.7;
+  color: #52667a;
+}
+
+/* ==================== acciones ==================== */
+.acciones {
+  display: flex;
+  flex-direction: column;
+  gap: 0.75rem;
+  margin-top: 30px;
+  width: 100%;
+}
+
+/* ==================== botones ==================== */
+.boton {
+  width: 100%;
+  padding: 14px 20px;
+  text-align: center;
+  text-decoration: none;
+  font-weight: 800;
+  border-radius: 8px;
+
+  /* ======= experiencia 5: transición en botones ======= */
+  transition: transform 0.2s ease, background-color 0.2s ease, box-shadow 0.2s ease;
+}
+
+.boton--principal {
+  color: white;
+  background: #168f7a;
+  box-shadow: 0 4px 12px rgba(22, 143, 122, 0.3);
+}
+
+.boton--secundario {
+  color: #0b3562;
+  background: white;
+  border: 2px solid #0b3562;
+}
+
+/* ======= experiencia 5: hover en botones ======= */
+.boton:hover {
+  transform: translateY(-2px);     /* sube ligeramente */
+}
+
+.boton--principal:hover {
+  background: #0f6b5b;            /* color más oscuro */
+  box-shadow: 0 8px 20px rgba(22, 143, 122, 0.4);
+}
+
+.boton--secundario:hover {
+  background: #f0f4f8;
+  box-shadow: 0 8px 20px rgba(11, 53, 98, 0.15);
+}
+
+/* ==================== hero imagen ==================== */
+.hero__imagen {
+  width: 100%;
+  max-width: 600px;
+}
+
+.hero__imagen img {
+  width: 100%;
+  max-width: 100%;
+  height: auto;
+  object-fit: cover;
+  display: block;
+  border-radius: 18px;
+  box-shadow: 0 18px 50px rgba(24, 68, 108, 0.18);
+}
+
+/* ==================== servicios ==================== */
+.servicios {
+  width: 100%;
+  max-width: 1180px;
+  margin: 0 auto;
+  padding: 40px 28px 60px;
+}
+
+.seccion-titulo {
+  width: 100%;
+  max-width: 620px;
+  margin-bottom: 36px;
+}
+
+.seccion-titulo h2,
+.proyectos h2 {
+  margin: 10px 0 12px;
+  font-size: 2rem;
+  color: #0b3562;
+}
+
+/* ==================== tarjetas ==================== */
+.tarjetas {
+  display: grid;
+  grid-template-columns: 1fr;
+  gap: 24px;
+}
+
+/* ==================== tarjeta ==================== */
+.tarjeta {
+  padding: 28px;
+  background: white;
+  border: 1px solid #dce5ee;
+  border-radius: 14px;
+
+  /* flexbox interno */
+  display: flex;
+  flex-direction: column;
+
+  /* ======= experiencia 5: transición en tarjetas ======= */
+  transition: transform 0.25s ease, box-shadow 0.25s ease;
+
+  /* ======= experiencia 5: sombra inicial ======= */
+  box-shadow: 0 4px 12px rgba(0, 0, 0, 0.08);
+}
+
+/* ======= experiencia 5: hover en tarjetas ======= */
+.tarjeta:hover {
+  transform: translateY(-5px);     /* sube al pasar el mouse */
+  box-shadow: 0 12px 28px rgba(0, 0, 0, 0.15);  /* sombra más grande */
+}
+
+/* ==================== tarjeta destacada ==================== */
+.tarjeta--destacada {
+  grid-column: auto;
+  border-color: #168f7a;
+  background: #f0faf8;
+
+  /* ======= experiencia 5: sombra diferente en destacada ======= */
+  box-shadow: 0 4px 12px rgba(22, 143, 122, 0.15);
+}
+
+.tarjeta--destacada:hover {
+  transform: translateY(-5px) scale(1.01);  /* sube + se agranda ligeramente */
+  box-shadow: 0 14px 32px rgba(22, 143, 122, 0.25);
+}
+
+.tarjeta__boton {
+  margin-top: auto;
+  color: #168f7a;
+  font-weight: 800;
+  text-decoration: none;
+}
+
+.tarjeta__icono {
+  width: 48px;
+  height: 48px;
+  display: grid;
+  place-items: center;
+  margin-bottom: 28px;
+  color: white;
+  font-weight: 800;
+  background: #0a5ea8;
+  border-radius: 12px;
+}
+
+.tarjeta h3 {
+  font-size: 1.3rem;
+  color: #0b3562;
+  margin: 0 0 12px 0;
+}
+
+.tarjeta p {
+  line-height: 1.6;
+  color: #60758a;
+  margin: 0 0 20px 0;
+  flex: 1;
+}
+
+/* ==================== proyectos ==================== */
+.proyectos {
+  position: relative;
+  width: 100%;
+  max-width: 1180px;
+  margin: 0 auto 60px;
+  padding: 30px 28px;
+  background: #eaf6f3;
+  border-radius: 20px;
+}
+
+/* ==================== dato ==================== */
+.dato {
+  position: relative;
+  width: 100%;
+  max-width: 400px;
+  margin-top: 20px;
+  padding: 36px;
+  color: white;
+  background: #0b3562;
+  border-radius: 16px;
+
+  /* ======= experiencia 5: transición en dato ======= */
+  transition: transform 0.3s ease, box-shadow 0.3s ease;
+  box-shadow: 0 4px 12px rgba(11, 53, 98, 0.2);
+}
+
+/* ======= experiencia 5: hover en dato ======= */
+.dato:hover {
+  transform: scale(1.02);          /* se agranda ligeramente */
+  box-shadow: 0 10px 30px rgba(11, 53, 98, 0.3);
+}
+
+.dato strong {
+  display: block;
+  margin-bottom: 10px;
+  font-size: 3.2rem;
+}
+
+.dato span {
+  line-height: 1.5;
+}
+
+/* ==================== ayuda ==================== */
+.ayuda {
+  position: fixed;
+  right: 16px;
+  bottom: 16px;
+  z-index: 10;
+  width: 56px;
+  height: 56px;
+  color: white;
+  font-size: 1.5rem;
+  font-weight: 900;
+  background: #168f7a;
+  border: 0;
+  border-radius: 50%;
+  box-shadow: 0 10px 28px rgba(0, 0, 0, 0.18);
+  cursor: pointer;
+
+  /* ======= experiencia 5: transición en botón ayuda ======= */
+  transition: transform 0.2s ease, box-shadow 0.2s ease, background-color 0.2s ease;
+}
+
+/* ======= experiencia 5: hover en botón ayuda ======= */
+.ayuda:hover {
+  transform: scale(1.1);           /* se agranda */
+  box-shadow: 0 14px 34px rgba(0, 0, 0, 0.25);
+  background: #0f6b5b;
+}
+
+/* ==================== footer ==================== */
+.footer {
+  width: 100%;
+  max-width: 1180px;
+  margin: 0 auto;
+  padding: 28px;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  gap: 12px;
+  color: #dbe8f3;
+  background: #0b3562;
+  text-align: center;
+}
+
+/* =========================================================
+   media query - tablet
+   ========================================================= */
+@media (min-width: 768px) {
+
+  .header {
+    flex-direction: row;
+    align-items: center;
+    justify-content: space-between;
+    padding: 0 28px;
+    gap: 0;
+  }
+
+  .nav {
+    flex-direction: row;
+    gap: 1.5rem;
+    width: auto;
+  }
+
+  .hero {
+    flex-direction: row;
+    align-items: center;
+    gap: 3rem;
+    padding: 50px 28px 70px;
+  }
+
+  .hero__texto {
+    flex: 1 1 0;
+  }
+
+  .hero__imagen {
+    flex: 1 1 0;
+  }
+
+  .acciones {
+    flex-direction: row;
+    gap: 1rem;
+    width: auto;
+  }
+
+  .boton {
+    width: auto;
+    min-width: 140px;
+  }
+
+  .tarjetas {
+    grid-template-columns: repeat(2, 1fr);
+  }
+
+  .tarjeta--destacada {
+    grid-column: span 2;
+  }
+
+  .proyectos {
+    padding: 52px 430px 52px 52px;
+    margin-bottom: 80px;
+  }
+
+  .dato {
+    position: absolute;
+    top: 52px;
+    right: -40px;
+    width: 380px;
+    margin-top: 0;
+  }
+
+  .footer {
+    flex-direction: row;
+    justify-content: space-between;
+    align-items: center;
+    text-align: left;
+  }
+}
+
+
+@media (min-width: 1024px) {
+
+  .tarjetas {
+    grid-template-columns: repeat(3, 1fr);
+  }
+
+  .dato {
+    right: -30px;
+    width: 400px;
+  }
+
+  .hero {
+    padding: 70px 0;
+  }
+
+  .servicios {
+    padding: 70px 0 90px;
+  }
+
+  .seccion-titulo h2,
+  .proyectos h2 {
+    font-size: 2.4rem;
+  }
+}
+
+
+@media (prefers-reduced-motion: reduce) {
+
+  /* desactiva todas las transiciones y animaciones */
+  .tarjeta,
+  .tarjeta--destacada,
+  .boton,
+  .ayuda,
+  .dato {
+    transition: none;
+  }
+
+  /* elimina las transformaciones en hover */
+  .tarjeta:hover,
+  .tarjeta--destacada:hover,
+  .boton:hover,
+  .ayuda:hover,
+  .dato:hover {
+    transform: none;
+  }
+
+  html {
+    scroll-behavior: auto;
+  }
+}

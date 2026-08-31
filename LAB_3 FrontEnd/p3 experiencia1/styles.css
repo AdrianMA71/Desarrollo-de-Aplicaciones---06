@@ -1,0 +1,346 @@
+* {
+  box-sizing: border-box;
+}
+
+html {
+  scroll-behavior: smooth;
+}
+
+body {
+  margin: 0;
+  font-family: arial, helvetica, sans-serif;
+  color: #17324d;
+  background: #f7fafc;
+}
+
+
+.header {
+  width: 100%;                    /* ocupa todo el ancho disponible */
+  max-width: 1180px;              /* antes: width: 1180px (rígido) */
+  /* height: 78px; eliminado */
+  margin: 0 auto;
+  padding: 16px 28px;             /* antes: padding: 0 28px */
+
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+
+  background: #ffffff;
+  border-bottom: 1px solid #d9e2ec;
+}
+
+.logo {
+  color: #0a4f88;
+  font-size: 1.65rem;
+  font-weight: 800;
+  text-decoration: none;
+}
+
+
+.nav {
+  display: flex;
+  gap: 20px;                      /* antes: gap: 34px */
+  flex-wrap: wrap;                /* nuevo: permite que los enlaces bajen */
+  /* white-space: nowrap; eliminado */
+}
+
+.nav a {
+  color: #17324d;
+  font-weight: 700;
+  text-decoration: none;
+}
+
+.nav a:hover {
+  color: #168f7a;
+}
+
+
+.hero {
+  width: 100%;                    /* ocupa todo el ancho disponible */
+  max-width: 1180px;              /* antes: width: 1180px (rígido) */
+  /* height: 560px; eliminado */
+  margin: 0 auto;
+  padding: 50px 28px 70px;        /* antes: padding: 70px 0 */
+
+  display: flex;
+  align-items: center;
+  gap: 50px;                      /* antes: gap: 70px */
+  flex-wrap: wrap;                /* nuevo: permite que los elementos bajen */
+}
+
+/* ==================== hero texto ==================== */
+/* cambio: width: 510px → max-width: 510px + flex: 1 1 300px */
+.hero__texto {
+  max-width: 510px;               /* antes: width: 510px (rígido) */
+  flex: 1 1 300px;                /* nuevo: permite que crezca y se encoja */
+  min-width: 280px;               /* nuevo: evita que se haga demasiado pequeño */
+}
+
+.etiqueta,
+.seccion-titulo > span {
+  color: #168f7a;
+  font-size: 0.78rem;
+  font-weight: 800;
+  letter-spacing: 0.08em;
+}
+
+/* ==================== hero título ==================== */
+/* cambio: font-size: 58px → clamp(2rem, 5vw, 58px) */
+.hero h1 {
+  margin: 16px 0 20px;
+  font-size: clamp(2rem, 5vw, 58px); /* antes: font-size: 58px (rígido) */
+  line-height: 1.1;                   /* antes: line-height: 1.02 */
+  color: #0b3562;
+}
+
+.hero p,
+.seccion-titulo p,
+.proyectos p {
+  line-height: 1.7;
+  color: #52667a;
+}
+
+/* ==================== acciones ==================== */
+/* cambio: se agregó flex-wrap: wrap */
+.acciones {
+  margin-top: 30px;
+  display: flex;
+  gap: 14px;
+  flex-wrap: wrap;                /* nuevo: permite que los botones bajen */
+}
+
+/* ==================== botones ==================== */
+/* cambio: min-width: 180px → min-width: 140px */
+.boton {
+  min-width: 140px;               /* antes: min-width: 180px */
+  padding: 14px 20px;
+  text-align: center;
+  text-decoration: none;
+  font-weight: 800;
+  border-radius: 8px;
+}
+
+.boton--principal {
+  color: white;
+  background: #168f7a;
+}
+
+.boton--secundario {
+  color: #0b3562;
+  background: white;
+  border: 2px solid #0b3562;
+}
+
+/* ==================== hero imagen ==================== */
+/* cambio: width: 600px → max-width: 600px + flex: 1 1 300px */
+.hero__imagen {
+  max-width: 600px;               /* antes: width: 600px (rígido) */
+  flex: 1 1 300px;                /* nuevo: permite que crezca y se encoja */
+  min-width: 280px;               /* nuevo: evita que se haga demasiado pequeño */
+}
+
+/* ==================== imagen ==================== */
+/* cambio: width: 680px → max-width: 100% + width: 100% */
+/* cambio: height: 430px → height: auto (eliminado) */
+.hero__imagen img {
+  width: 100%;                    /* nuevo: ocupa todo el ancho del contenedor */
+  max-width: 100%;                /* antes: width: 680px (rígido) */
+  /* height: 430px; eliminado */
+  height: auto;                   /* nuevo: mantiene la proporción */
+  object-fit: cover;
+  display: block;
+  border-radius: 18px;
+  box-shadow: 0 18px 50px rgba(24, 68, 108, 0.18);
+}
+
+/* ==================== servicios ==================== */
+/* cambio: width: 1180px → max-width: 1180px + width: 100% */
+.servicios {
+  width: 100%;                    /* ocupa todo el ancho disponible */
+  max-width: 1180px;              /* antes: width: 1180px (rígido) */
+  margin: 0 auto;
+  padding: 60px 28px 80px;        /* antes: padding: 70px 0 90px */
+}
+
+/* ==================== sección título ==================== */
+/* cambio: width: 620px → max-width: 620px + width: 100% */
+.seccion-titulo {
+  width: 100%;                    /* ocupa todo el ancho disponible */
+  max-width: 620px;               /* antes: width: 620px (rígido) */
+  margin-bottom: 36px;
+}
+
+.seccion-titulo h2,
+.proyectos h2 {
+  margin: 10px 0 12px;
+  font-size: 2.4rem;
+  color: #0b3562;
+}
+
+/* ==================== tarjetas ==================== */
+/* cambio: se agregó flex-wrap: wrap */
+/* cambio: se agregó justify-content: center */
+.tarjetas {
+  display: flex;
+  gap: 24px;
+  flex-wrap: wrap;                /* nuevo: permite que las tarjetas bajen */
+  justify-content: center;        /* nuevo: centra las tarjetas */
+}
+
+/* ==================== tarjeta ==================== */
+/* cambio: width: 377px → max-width: 377px + flex: 1 1 280px */
+/* cambio: min-height: 280px → eliminado */
+.tarjeta {
+  max-width: 377px;               /* antes: width: 377px (rígido) */
+  flex: 1 1 280px;                /* nuevo: permite que crezca y se encoja */
+  min-width: 250px;               /* nuevo: evita que se haga demasiado pequeño */
+  padding: 28px;
+  background: white;
+  border: 1px solid #dce5ee;
+  border-radius: 14px;
+  /* min-height: 280px; eliminado */
+}
+
+.tarjeta__icono {
+  width: 48px;
+  height: 48px;
+  display: grid;
+  place-items: center;
+  margin-bottom: 28px;
+  color: white;
+  font-weight: 800;
+  background: #0a5ea8;
+  border-radius: 12px;
+}
+
+.tarjeta h3 {
+  font-size: 1.3rem;
+  color: #0b3562;
+}
+
+.tarjeta p {
+  min-height: 78px;
+  line-height: 1.6;
+  color: #60758a;
+}
+
+.tarjeta a {
+  color: #168f7a;
+  font-weight: 800;
+}
+
+.proyectos {
+  position: relative;
+  width: 100%;                    /* ocupa todo el ancho disponible */
+  max-width: 1180px;              /* antes: width: 1180px (rígido) */
+  /* min-height: 270px; eliminado */
+  margin: 0 auto 80px;
+  padding: 40px 28px;             /* antes: padding: 52px 430px 52px 52px */
+  background: #eaf6f3;
+  border-radius: 20px;
+}
+
+.dato {
+  position: relative;             /* antes: position: absolute */
+  /* right: -70px; eliminado */
+  /* top: 52px; eliminado */
+  width: 100%;                    /* ocupa todo el ancho disponible */
+  max-width: 400px;               /* antes: width: 420px (rígido) */
+  margin-top: 20px;               /* nuevo: separación del contenido superior */
+  padding: 36px;
+  color: white;
+  background: #0b3562;
+  border-radius: 16px;
+}
+
+.dato strong {
+  display: block;
+  margin-bottom: 10px;
+  font-size: 3.2rem;
+}
+
+.dato span {
+  line-height: 1.5;
+}
+
+
+.ayuda {
+  position: fixed;
+  right: 16px;                    /* antes: right: 24px */
+  bottom: 16px;                   /* antes: bottom: 24px */
+  z-index: 10;
+  width: 60px;                    /* antes: width: 74px */
+  height: 60px;                   /* antes: height: 74px */
+  color: white;
+  font-size: 1.5rem;              /* antes: font-size: 2rem */
+  font-weight: 900;
+  background: #168f7a;
+  border: 0;
+  border-radius: 50%;
+  box-shadow: 0 10px 28px rgba(0, 0, 0, 0.18);
+  cursor: pointer;                /* nuevo: indica que es interactivo */
+}
+
+
+.footer {
+  width: 100%;                    /* ocupa todo el ancho disponible */
+  max-width: 1180px;              /* antes: width: 1180px (rígido) */
+  margin: 0 auto;
+  padding: 28px;
+  display: flex;
+  flex-direction: column;         /* antes: row (para móvil) */
+  align-items: center;            /* nuevo: centrado en móvil */
+  gap: 12px;                      /* nuevo: separación entre elementos */
+  color: #dbe8f3;
+  background: #0b3562;
+}
+
+/* ==================== media query - tablet ==================== */
+@media (min-width: 768px) {
+
+  /* header - vuelve a fila */
+  .header {
+    padding: 0 28px;
+  }
+
+  /* footer - vuelve a fila */
+  .footer {
+    flex-direction: row;
+    justify-content: space-between;
+    align-items: center;
+  }
+
+  /* proyectos - recupera padding lateral */
+  .proyectos {
+    padding: 52px 430px 52px 52px;
+  }
+
+  /* dato - vuelve a posición absoluta */
+  .dato {
+    position: absolute;
+    top: 52px;
+    right: -40px;                 /* antes: right: -70px (ajustado) */
+    width: 380px;                 /* antes: width: 420px (ajustado) */
+    margin-top: 0;
+  }
+}
+
+/* ==================== media query - desktop ==================== */
+@media (min-width: 1024px) {
+
+  /* dato - recupera posición original ajustada */
+  .dato {
+    right: -30px;                 /* antes: right: -70px (ajustado) */
+    width: 400px;                 /* antes: width: 420px (ajustado) */
+  }
+
+  /* hero - recupera padding original */
+  .hero {
+    padding: 70px 0;
+  }
+
+  /* servicios - recupera padding original */
+  .servicios {
+    padding: 70px 0 90px;
+  }
+}

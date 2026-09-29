@@ -1,0 +1,41 @@
+$color-principal: #2c3e50;
+$color-alerta: #e74c3c;
+$fuente-base: 'Arial', sans-serif;
+
+body {
+  font-family: $fuente-base;
+  background-color: #f4f4f4;
+}
+
+.sidebar {
+  background-color: $color-principal;
+  width: 250px;
+  padding: 20px;
+
+  ul {
+    list-style: none;
+    padding: 0;
+
+    li {
+      margin-bottom: 10px;
+      border-bottom: 1px solid rgba(255, 255, 255, 0.1);
+
+      a {
+        color: white;
+        text-decoration: none;
+        font-family: $fuente-base;
+        display: block;
+        padding: 5px;
+
+        &:hover {
+          color: $color-alerta;
+        }
+      }
+    }
+  }
+}
+
+.alerta-mensaje {
+  color: $color-alerta;
+  border: 1px solid $color-alerta;
+}

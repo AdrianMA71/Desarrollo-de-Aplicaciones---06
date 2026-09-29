@@ -1,0 +1,41 @@
+
+@mixin boton-estilo($color-fondo, $color-texto) {
+  background-color: $color-fondo;
+  color: $color-texto;
+  padding: 10px 20px;
+  border-radius: 5px;
+  border: none;
+  cursor: pointer;
+  transition: background-color 0.2s ease;
+
+  &:hover {
+    background-color: darken($color-fondo, 10%);
+  }
+}
+
+%mensaje-base {
+  padding: 15px;
+  border: 1px solid transparent;
+  border-radius: 4px;
+  font-family: 'Arial', sans-serif;
+}
+
+.btn-aceptar {
+  @include boton-estilo(#2ecc71, white);
+}
+
+.btn-cancelar {
+  @include boton-estilo(#e74c3c, white);
+}
+
+.mensaje-error {
+  @extend %mensaje-base;
+  background-color: #f8d7da;
+  color: #721c24;
+}
+
+.mensaje-exito {
+  @extend %mensaje-base;
+  background-color: #d4edda;
+  color: #155724;
+}

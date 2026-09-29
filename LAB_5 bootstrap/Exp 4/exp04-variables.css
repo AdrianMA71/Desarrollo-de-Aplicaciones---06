@@ -1,0 +1,33 @@
+body {
+  font-family: "Arial", sans-serif;
+  background-color: #f4f4f4;
+}
+
+.sidebar {
+  background-color: #2c3e50;
+  width: 250px;
+  padding: 20px;
+}
+.sidebar ul {
+  list-style: none;
+  padding: 0;
+}
+.sidebar ul li {
+  margin-bottom: 10px;
+  border-bottom: 1px solid rgba(255, 255, 255, 0.1);
+}
+.sidebar ul li a {
+  color: white;
+  text-decoration: none;
+  font-family: "Arial", sans-serif;
+  display: block;
+  padding: 5px;
+}
+.sidebar ul li a:hover {
+  color: #e74c3c;
+}
+
+.alerta-mensaje {
+  color: #e74c3c;
+  border: 1px solid #e74c3c;
+}/*# sourceMappingURL=exp04-variables.css.map */

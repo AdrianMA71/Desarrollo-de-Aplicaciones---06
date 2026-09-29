@@ -1,0 +1,32 @@
+%btn-base {
+  display: inline-block;
+  padding: px-a-rem(10px) px-a-rem(20px);
+  font-size: px-a-rem(16px);
+  font-weight: 600;
+  border: none;
+  border-radius: px-a-rem(6px);
+  cursor: pointer;
+  transition: background-color 0.2s ease, transform 0.1s ease;
+  text-align: center;
+
+  &:active {
+    transform: scale(0.98);
+  }
+}
+
+@each $nombre, $color in $tema-colores {
+  .btn-#{$nombre} {
+    @extend %btn-base;
+    @include tema-componente($color);
+
+    @if lightness($color) > 50% {
+      &:hover {
+        background-color: darken($color, 10%);
+      }
+    } @else {
+      &:hover {
+        background-color: lighten($color, 10%);
+      }
+    }
+  }
+}

@@ -1,0 +1,15 @@
+@mixin tema-componente($color-fondo) {
+  background-color: $color-fondo;
+
+  @if lightness($color-fondo) > 50% {
+    color: #000;
+  } @else {
+    color: #fff;
+  }
+}
+
+@mixin flex-centrado {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}

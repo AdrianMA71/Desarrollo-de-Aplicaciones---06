@@ -1,0 +1,43 @@
+.texto-primario {
+  color: #0d6efd;
+}
+
+.fondo-primario {
+  background-color: #0d6efd;
+}
+
+.texto-exito {
+  color: #198754;
+}
+
+.fondo-exito {
+  background-color: #198754;
+}
+
+.texto-secundario {
+  color: #6c757d;
+}
+
+.fondo-secundario {
+  background-color: #6c757d;
+}
+
+.texto-peligro {
+  color: #dc3545;
+}
+
+.fondo-peligro {
+  background-color: #dc3545;
+}
+
+.mt-1 {
+  margin-top: 10px;
+}
+
+.mt-2 {
+  margin-top: 20px;
+}
+
+.mt-3 {
+  margin-top: 30px;
+}/*# sourceMappingURL=exp06-automatizacion.css.map */

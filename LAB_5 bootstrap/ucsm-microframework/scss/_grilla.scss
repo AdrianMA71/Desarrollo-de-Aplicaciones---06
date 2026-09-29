@@ -1,0 +1,40 @@
+.container {
+  width: 100%;
+  padding-right: ($gutter / 2);
+  padding-left: ($gutter / 2);
+  margin-right: auto;
+  margin-left: auto;
+
+  @each $nombre, $ancho in $breakpoints {
+    @media (min-width: $ancho) {
+      max-width: $ancho - 20px;
+    }
+  }
+}
+
+.row {
+  display: flex;
+  flex-wrap: wrap;
+  margin-right: -($gutter / 2);
+  margin-left: -($gutter / 2);
+}
+
+@for $i from 1 through $columnas {
+  .col-#{$i} {
+    flex: 0 0 auto;
+    width: ancho-columna($i);
+    padding-right: ($gutter / 2);
+    padding-left: ($gutter / 2);
+  }
+}
+
+@each $nombre, $ancho in $breakpoints {
+  @media (min-width: $ancho) {
+    @for $i from 1 through $columnas {
+      .col-#{$nombre}-#{$i} {
+        flex: 0 0 auto;
+        width: ancho-columna($i);
+      }
+    }
+  }
+}

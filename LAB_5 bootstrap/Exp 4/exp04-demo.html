@@ -1,0 +1,32 @@
+
+<!DOCTYPE html>
+<html lang="es">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <title>Variables y Nesting</title>
+  <link href="exp04-variables.css" rel="stylesheet">
+</head>
+<body>
+  <div style="display:flex;">
+    <div class="sidebar">
+      <ul>
+        <li><a href="#">Dashboard</a></li>
+        <li><a href="#">Reportes</a></li>
+        <li><a href="#">Configuración</a></li>
+        <li><a href="#">Cerrar sesión</a></li>
+      </ul>
+    </div>
+
+    <div style="padding:20px;">
+      <h1>Variables y Nesting en Sass</h1>
+      <p>Pasa el mouse sobre los enlaces del sidebar para ver el color de
+        <code>$color-alerta</code> aplicado en <code>:hover</code>.</p>
+
+      <p class="alerta-mensaje" style="display:inline-block; padding:10px;">
+        Variable $color-alerta.
+      </p>
+    </div>
+  </div>
+</body>
+</html>

@@ -1,0 +1,23 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <title>Demo Experiencia 05 - Mixins y @extend</title>
+  <link href="exp05-mixins.css" rel="stylesheet">
+</head>
+<body style="font-family:Arial, sans-serif; padding:30px;">
+  <h1>Demo: Mixins paramétricos y @extend</h1>
+
+  <p>Botones generados con <code>@mixin boton-estilo()</code>
+    (pasa el mouse para ver el efecto <code>darken()</code> en el hover):</p>
+  <button class="btn-aceptar">Aceptar</button>
+  <button class="btn-cancelar">Cancelar</button>
+
+  <p style="margin-top:30px;">Mensajes de estado generados con
+    <code>@extend %mensaje-base</code>:</p>
+  <div class="mensaje-exito">Operación realizada con éxito.</div>
+  <br>
+  <div class="mensaje-error">Ocurrió un error al procesar la solicitud.</div>
+</body>
+</html>

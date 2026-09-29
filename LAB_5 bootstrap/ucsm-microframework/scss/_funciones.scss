@@ -1,0 +1,7 @@
+@function px-a-rem($pixeles) {
+  @return ($pixeles / $base-font-size) * 1rem;
+}
+
+@function ancho-columna($cols, $total: $columnas) {
+  @return percentage($cols / $total);
+}

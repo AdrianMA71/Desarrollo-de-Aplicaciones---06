@@ -1,0 +1,47 @@
+@import "variables";
+@import "funciones";
+@import "mixins";
+@import "grilla";
+@import "botones";
+
+body {
+  font-family: 'Segoe UI', Tahoma, sans-serif;
+  font-size: px-a-rem(16px);
+  margin: 0;
+  padding: px-a-rem(24px);
+  background-color: #f5f5f5;
+  color: #212529;
+}
+
+h1 {
+  font-size: px-a-rem(32px);
+  margin-bottom: px-a-rem(16px);
+  color: $ucsm-verde;
+}
+
+h2 {
+  font-size: px-a-rem(24px);
+  margin-bottom: px-a-rem(12px);
+  color: $ucsm-verde-oscuro;
+}
+
+.ucsm-banner {
+  @include tema-componente($ucsm-verde);
+  padding: px-a-rem(20px);
+  border-radius: px-a-rem(8px);
+  margin-bottom: px-a-rem(16px);
+}
+
+.ucsm-dorado {
+  @include tema-componente($ucsm-dorado);
+  padding: px-a-rem(20px);
+  border-radius: px-a-rem(8px);
+  margin-bottom: px-a-rem(16px);
+}
+
+.alerta-ucsm {
+  @include tema-componente($ucsm-rojo);
+  padding: px-a-rem(14px);
+  border-radius: px-a-rem(6px);
+  margin-bottom: px-a-rem(16px);
+}

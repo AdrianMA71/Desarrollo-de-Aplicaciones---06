@@ -1,0 +1,386 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Panel Administrativo - UCSM</title>
+  <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/css/bootstrap.min.css" rel="stylesheet">
+  <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.11.3/font/bootstrap-icons.min.css">
+
+  <style>
+    :root {
+      --ucsm-verde: #006633;
+      --ucsm-verde-oscuro: #004d26;
+      --ucsm-dorado: #C9A227;
+    }
+
+    body {
+      background-color: #f5f5f5;
+      padding-top: 56px;
+    }
+
+    .navbar-ucsm {
+      background-color: var(--ucsm-verde);
+    }
+
+    .navbar-ucsm .navbar-brand {
+      color: #fff;
+      font-weight: 600;
+    }
+
+    .navbar-ucsm .navbar-text {
+      color: #e8f5e9;
+    }
+
+    @media (min-width: 992px) {
+      .sidebar {
+        position: fixed;
+        top: 56px;
+        left: 0;
+        width: 230px;
+        height: calc(100vh - 56px);
+        background-color: var(--ucsm-verde-oscuro);
+        padding: 15px 10px;
+      }
+      .contenido {
+        margin-left: 230px;
+      }
+    }
+
+    .sidebar .nav-link {
+      color: #c8e6c9;
+      padding: 9px 12px;
+      border-radius: 5px;
+      margin-bottom: 3px;
+      font-size: 0.95rem;
+    }
+
+    .sidebar .nav-link:hover {
+      background-color: rgba(255, 255, 255, 0.1);
+      color: #fff;
+    }
+
+    .sidebar .nav-link.active {
+      background-color: var(--ucsm-dorado);
+      color: #212529;
+      font-weight: 600;
+    }
+
+    #menuLateral {
+      background-color: var(--ucsm-verde-oscuro);
+    }
+
+    #menuLateral .nav-link {
+      color: #c8e6c9;
+      padding: 9px 12px;
+      border-radius: 5px;
+      margin-bottom: 3px;
+    }
+
+    #menuLateral .nav-link:hover,
+    #menuLateral .nav-link.active {
+      background-color: var(--ucsm-dorado);
+      color: #212529;
+    }
+
+    .tabla-ucsm thead {
+      background-color: var(--ucsm-verde);
+      color: #fff;
+    }
+
+    .btn-ucsm {
+      background-color: var(--ucsm-dorado);
+      color: #212529;
+      font-weight: 600;
+      border: none;
+    }
+
+    .btn-ucsm:hover {
+      background-color: #b08d1f;
+      color: #212529;
+    }
+
+    .modal-header-ucsm {
+      background-color: var(--ucsm-verde);
+      color: #fff;
+    }
+  </style>
+</head>
+<body>
+
+  <nav class="navbar navbar-dark navbar-ucsm fixed-top">
+    <div class="container-fluid">
+      <a class="navbar-brand" href="#">
+        <i class="bi bi-mortarboard-fill me-2"></i>UCSM · Sistema Académico
+      </a>
+
+      <button class="navbar-toggler d-lg-none border-0" type="button"
+              data-bs-toggle="offcanvas" data-bs-target="#menuLateral">
+        <span class="navbar-toggler-icon"></span>
+      </button>
+
+      <span class="navbar-text d-none d-lg-inline">
+        <i class="bi bi-person-circle me-1"></i>Mg. Ángel Montesinos
+      </span>
+    </div>
+  </nav>
+
+  <div class="offcanvas offcanvas-start text-white" id="menuLateral">
+    <div class="offcanvas-header border-bottom border-secondary">
+      <h5 class="offcanvas-title">
+        <i class="bi bi-mortarboard-fill text-warning me-2"></i>UCSM
+      </h5>
+      <button type="button" class="btn-close btn-close-white" data-bs-dismiss="offcanvas"></button>
+    </div>
+    <div class="offcanvas-body">
+      <ul class="nav flex-column">
+        <li class="nav-item"><a class="nav-link active" href="#">Dashboard</a></li>
+        <li class="nav-item"><a class="nav-link" href="#">Alumnos</a></li>
+        <li class="nav-item"><a class="nav-link" href="#">Cursos</a></li>
+        <li class="nav-item"><a class="nav-link" href="#">Pagos</a></li>
+        <li class="nav-item"><a class="nav-link" href="#">Seguridad</a></li>
+        <li class="nav-item"><a class="nav-link" href="#">Reportes</a></li>
+      </ul>
+    </div>
+  </div>
+
+  <div class="sidebar d-none d-lg-block">
+    <ul class="nav flex-column">
+      <li class="nav-item"><a class="nav-link active" href="#">Dashboard</a></li>
+      <li class="nav-item"><a class="nav-link" href="#">Alumnos</a></li>
+      <li class="nav-item"><a class="nav-link" href="#">Cursos</a></li>
+      <li class="nav-item"><a class="nav-link" href="#">Pagos</a></li>
+      <li class="nav-item"><a class="nav-link" href="#">Seguridad</a></li>
+      <li class="nav-item"><a class="nav-link" href="#">Reportes</a></li>
+    </ul>
+  </div>
+
+  <div class="contenido p-4">
+
+    <div class="d-flex justify-content-between align-items-center mb-3">
+      <div>
+        <h3 class="mb-0">Panel de Control</h3>
+        <small class="text-muted">Arequipa, Perú · Semestre 2026-II</small>
+      </div>
+      <button class="btn btn-ucsm" data-bs-toggle="modal" data-bs-target="#modalRegistro">
+        + Nuevo Registro
+      </button>
+    </div>
+
+    <div class="row g-3 mb-4">
+
+      <div class="col-12 col-md-6 col-lg-3">
+        <div class="card">
+          <div class="card-body">
+            <p class="text-muted mb-1">Alumnos Activos</p>
+            <h4 class="fw-bold mb-0">1,248</h4>
+          </div>
+        </div>
+      </div>
+
+      <div class="col-12 col-md-6 col-lg-3">
+        <div class="card">
+          <div class="card-body">
+            <p class="text-muted mb-1">Alertas de Seguridad</p>
+            <h4 class="fw-bold text-danger mb-0">7</h4>
+          </div>
+        </div>
+      </div>
+
+      <div class="col-12 col-md-6 col-lg-3">
+        <div class="card">
+          <div class="card-body">
+            <p class="text-muted mb-1">Carga del Servidor</p>
+            <h4 class="fw-bold text-warning mb-0">68%</h4>
+          </div>
+        </div>
+      </div>
+
+      <div class="col-12 col-md-6 col-lg-3">
+        <div class="card">
+          <div class="card-body">
+            <p class="text-muted mb-1">Ingresos del Mes</p>
+            <h4 class="fw-bold text-success mb-0">S/ 48,500</h4>
+          </div>
+        </div>
+      </div>
+
+    </div>
+
+    <div class="card">
+      <div class="card-header bg-white">
+        <strong>Últimos Eventos del Sistema</strong>
+      </div>
+      <div class="card-body p-0">
+        <div class="table-responsive">
+          <table class="table table-hover tabla-ucsm mb-0">
+            <thead>
+              <tr>
+                <th>#</th>
+                <th>Evento</th>
+                <th>Usuario</th>
+                <th>Fecha</th>
+                <th>Prioridad</th>
+              </tr>
+            </thead>
+            <tbody>
+              <tr>
+                <td>001</td>
+                <td>Intento de acceso fallido</td>
+                <td>jchoque@ucsm.edu.pe</td>
+                <td>12/01/2026 10:23</td>
+                <td><span class="badge bg-danger">Crítico</span></td>
+              </tr>
+              <tr>
+                <td>002</td>
+                <td>Matrícula registrada - Ing. Sistemas</td>
+                <td>mvargas@ucsm.edu.pe</td>
+                <td>28/02/2026 09:40</td>
+                <td><span class="badge bg-success">Normal</span></td>
+              </tr>
+              <tr>
+                <td>003</td>
+                <td>Pago pendiente - Pensión Marzo</td>
+                <td>rcondori@ucsm.edu.pe</td>
+                <td>15/03/2026 09:12</td>
+                <td><span class="badge bg-warning text-dark">Advertencia</span></td>
+              </tr>
+              <tr>
+                <td>004</td>
+                <td>Actualización de notas</td>
+                <td>lquispe@ucsm.edu.pe</td>
+                <td>22/05/2026 08:55</td>
+                <td><span class="badge bg-success">Normal</span></td>
+              </tr>
+              <tr>
+                <td>005</td>
+                <td>Servidor reiniciado</td>
+                <td>admin@ucsm.edu.pe</td>
+                <td>07/07/2026 07:30</td>
+                <td><span class="badge bg-danger">Crítico</span></td>
+              </tr>
+              <tr>
+                <td>006</td>
+                <td>Backup de base de datos completado</td>
+                <td>sistemas@ucsm.edu.pe</td>
+                <td>19/08/2026 06:15</td>
+                <td><span class="badge bg-success">Normal</span></td>
+              </tr>
+            </tbody>
+          </table>
+        </div>
+      </div>
+    </div>
+
+  </div>
+
+  <div class="modal fade" id="modalRegistro" tabindex="-1">
+    <div class="modal-dialog modal-dialog-centered modal-lg">
+      <div class="modal-content">
+        <form id="formRegistro">
+          <div class="modal-header modal-header-ucsm">
+            <h5 class="modal-title">
+              <i class="bi bi-plus-circle me-2"></i>Registrar Nuevo Alumno — UCSM
+            </h5>
+            <button type="button" class="btn-close btn-close-white" data-bs-dismiss="modal"></button>
+          </div>
+
+          <div class="modal-body">
+            <div class="row g-3">
+
+              <div class="col-md-6">
+                <label class="form-label">Nombres</label>
+                <input type="text" class="form-control" placeholder="Ej: Gustavo Sebastian" required>
+              </div>
+
+              <div class="col-md-6">
+                <label class="form-label">Apellidos</label>
+                <input type="text" class="form-control" placeholder="Ej: Melo Mancilla" required>
+              </div>
+
+              <div class="col-md-6">
+                <label class="form-label">Correo UCSM</label>
+                <input type="email" class="form-control" placeholder="alumno@ucsm.edu.pe" required>
+              </div>
+
+              <div class="col-md-6">
+                <label class="form-label">DNI</label>
+                <input type="text" class="form-control" maxlength="8" placeholder="8 dígitos" required>
+              </div>
+
+              <div class="col-md-6">
+                <label class="form-label">Facultad</label>
+                <select class="form-select" required>
+                  <option selected disabled value="">Seleccione facultad...</option>
+                  <option>Ingeniería de Sistemas</option>
+                  <option>Ingeniería Civil</option>
+                  <option>Ingeniería Industrial</option>
+                  <option>Medicina Humana</option>
+                  <option>Administración de Empresas</option>
+                  <option>Derecho</option>
+                </select>
+              </div>
+
+              <div class="col-md-6">
+                <label class="form-label">Semestre</label>
+                <select class="form-select" required>
+                  <option selected disabled value="">Seleccione semestre...</option>
+                  <option>2026-I</option>
+                  <option>2026-II</option>
+                </select>
+              </div>
+
+              <div class="col-md-6">
+                <label class="form-label">Monto de Matrícula (S/)</label>
+                <input type="number" class="form-control" placeholder="850.00" step="0.01" required>
+              </div>
+
+              <div class="col-md-6">
+                <label class="form-label">Estado</label>
+                <select class="form-select" required>
+                  <option selected disabled value="">Seleccione estado...</option>
+                  <option>Activo</option>
+                  <option>Pendiente de pago</option>
+                  <option>Inactivo</option>
+                </select>
+              </div>
+
+              <div class="col-12">
+                <label class="form-label">Observaciones</label>
+                <textarea class="form-control" rows="3" placeholder="Notas adicionales..."></textarea>
+              </div>
+
+              <div class="col-12">
+                <div class="form-check">
+                  <input class="form-check-input" type="checkbox" id="acepto" required>
+                  <label class="form-check-label" for="acepto">
+                    Confirmo que los datos ingresados son correctos.
+                  </label>
+                </div>
+              </div>
+
+            </div>
+          </div>
+
+          <div class="modal-footer">
+            <button type="button" class="btn btn-secondary" data-bs-dismiss="modal">Cancelar</button>
+            <button type="submit" class="btn btn-ucsm">Guardar Registro</button>
+          </div>
+        </form>
+      </div>
+    </div>
+  </div>
+
+  <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/js/bootstrap.bundle.min.js"></script>
+
+  <script>
+    document.getElementById('formRegistro').addEventListener('submit', function(e) {
+      e.preventDefault();
+      alert('Registro guardado correctamente.');
+      bootstrap.Modal.getInstance(document.getElementById('modalRegistro')).hide();
+      this.reset();
+    });
+  </script>
+
+</body>
+</html>

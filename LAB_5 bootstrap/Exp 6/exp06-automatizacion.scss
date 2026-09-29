@@ -1,0 +1,22 @@
+$colores-tema: (
+  "primario": #0d6efd,
+  "exito": #198754,
+  "secundario": #6c757d,
+  "peligro": #dc3545
+);
+
+@each $nombre-color, $codigo-hex in $colores-tema {
+  .texto-#{$nombre-color} {
+    color: $codigo-hex;
+  }
+
+  .fondo-#{$nombre-color} {
+    background-color: $codigo-hex;
+  }
+}
+
+@for $i from 1 through 3 {
+  .mt-#{$i} {
+    margin-top: $i * 10px;
+  }
+}

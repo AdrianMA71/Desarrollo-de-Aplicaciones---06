@@ -1,0 +1,33 @@
+$ucsm-verde:          #006633;
+$ucsm-verde-oscuro:   #004d26;
+$ucsm-dorado:         #C9A227;
+$ucsm-rojo:           #b02a37;
+$ucsm-gris:           #6c757d;
+
+$tema-colores: (
+  "primario":    $ucsm-verde,
+  "secundario":  $ucsm-verde-oscuro,
+  "acento":      $ucsm-dorado,
+  "peligro":     $ucsm-rojo,
+  "advertencia": #ffc107
+);
+
+$base-font-size: 16px;
+
+$espaciados: (
+  "xs": 4px,
+  "sm": 8px,
+  "md": 16px,
+  "lg": 24px,
+  "xl": 32px
+);
+
+$breakpoints: (
+  "sm": 576px,
+  "md": 768px,
+  "lg": 992px,
+  "xl": 1200px
+);
+
+$columnas: 12;
+$gutter: 16px;  

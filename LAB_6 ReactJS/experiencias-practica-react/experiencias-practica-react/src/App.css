@@ -1,0 +1,136 @@
+.app {
+  min-height: 100vh;
+  display: flex;
+  flex-direction: column;
+}
+
+.header {
+  background: #14532d;
+  color: #fff;
+  padding: 1.2rem 2rem;
+}
+
+.header h1 {
+  margin: 0 0 0.3rem;
+}
+
+.header p {
+  margin: 0;
+  opacity: 0.85;
+}
+
+.contenido {
+  flex: 1;
+  text-align: center;
+  padding: 2rem;
+}
+
+.logo {
+  width: 90px;
+}
+
+.footer {
+  background: #1f2933;
+  color: #fff;
+  text-align: center;
+  padding: 1rem;
+}
+
+.footer p {
+  margin: 0;
+}
+
+.grid {
+  flex: 1;
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(220px, 1fr));
+  gap: 1rem;
+  padding: 2rem;
+  align-content: start;
+}
+
+.card {
+  background: #fff;
+  border-radius: 8px;
+  padding: 1rem 1.2rem;
+  box-shadow: 0 1px 4px rgba(0, 0, 0, 0.15);
+}
+
+.card h2 {
+  margin: 0 0 0.5rem;
+  color: #14532d;
+}
+
+.categoria {
+  display: inline-block;
+  background: #dcfce7;
+  color: #14532d;
+  padding: 0.15rem 0.6rem;
+  border-radius: 999px;
+  font-size: 0.85rem;
+}
+
+.acciones {
+  margin-top: 0.8rem;
+}
+
+.acciones button {
+  background: #b91c1c;
+  color: #fff;
+  border: none;
+  padding: 0.4rem 0.8rem;
+  border-radius: 4px;
+  cursor: pointer;
+}
+
+.formulario {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 1rem;
+  align-items: flex-end;
+  background: #fff;
+  margin: 1.5rem 2rem 0;
+  padding: 1rem 1.2rem;
+  border-radius: 8px;
+  box-shadow: 0 1px 4px rgba(0, 0, 0, 0.15);
+}
+
+.formulario label {
+  display: flex;
+  flex-direction: column;
+  font-size: 0.9rem;
+  gap: 0.3rem;
+}
+
+.formulario input {
+  padding: 0.4rem 0.6rem;
+  border: 1px solid #cbd5e1;
+  border-radius: 4px;
+}
+
+.formulario button {
+  background: #14532d;
+  color: #fff;
+  border: none;
+  padding: 0.5rem 1rem;
+  border-radius: 4px;
+  cursor: pointer;
+}
+
+.usuarios,
+.cargando {
+  margin: 0 2rem 2rem;
+  padding: 1rem 1.2rem;
+  background: #fff;
+  border-radius: 8px;
+  box-shadow: 0 1px 4px rgba(0, 0, 0, 0.15);
+}
+
+.usuarios h2 {
+  margin-top: 0;
+  color: #14532d;
+}
+
+.usuarios p {
+  margin: 0.3rem 0;
+}

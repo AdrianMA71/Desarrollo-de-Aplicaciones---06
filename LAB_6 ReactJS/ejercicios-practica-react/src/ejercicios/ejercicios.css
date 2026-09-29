@@ -1,0 +1,249 @@
+.ejercicio {
+  text-align: left;
+  padding: 32px 24px 48px;
+}
+
+.ejercicio h2 {
+  text-align: center;
+}
+
+.ejercicio > p.intro {
+  text-align: center;
+  margin-bottom: 24px;
+}
+
+/* ---------- Ejercicio 1 ---------- */
+.grid-juegos {
+  display: grid;
+  grid-template-columns: repeat(auto-fill, minmax(220px, 1fr));
+  gap: 16px;
+}
+
+.juego-card {
+  border: 1px solid var(--border);
+  border-radius: 10px;
+  padding: 16px;
+  display: flex;
+  flex-direction: column;
+  gap: 8px;
+  transition: box-shadow 0.2s;
+}
+
+.juego-card:hover {
+  box-shadow: var(--shadow);
+}
+
+.juego-card.favorito {
+  border-color: var(--accent);
+  background: var(--accent-bg);
+}
+
+.juego-card h3 {
+  margin: 0;
+  font-size: 18px;
+  color: var(--text-h);
+}
+
+.juego-card .categoria {
+  align-self: flex-start;
+  font-size: 12px;
+  padding: 2px 8px;
+  border-radius: 999px;
+  background: var(--code-bg);
+  color: var(--text);
+}
+
+.juego-card .acciones {
+  display: flex;
+  gap: 8px;
+  margin-top: 8px;
+}
+
+.juego-card button {
+  font: inherit;
+  font-size: 14px;
+  padding: 6px 10px;
+  border-radius: 6px;
+  border: 1px solid var(--border);
+  background: var(--bg);
+  color: var(--text-h);
+  cursor: pointer;
+}
+
+.juego-card button.activo {
+  background: var(--accent);
+  color: white;
+  border-color: var(--accent);
+}
+
+/* ---------- Ejercicio 2: ---------- */
+.form-resena {
+  max-width: 420px;
+  margin: 0 auto 32px;
+  display: flex;
+  flex-direction: column;
+  gap: 10px;
+}
+
+.form-resena label {
+  display: flex;
+  flex-direction: column;
+  gap: 4px;
+  font-size: 14px;
+  color: var(--text-h);
+  text-align: left;
+}
+
+.form-resena input,
+.form-resena select,
+.form-resena textarea {
+  font: inherit;
+  padding: 8px 10px;
+  border-radius: 6px;
+  border: 1px solid var(--border);
+  background: var(--bg);
+  color: var(--text-h);
+}
+
+.form-resena button {
+  font: inherit;
+  padding: 10px;
+  border-radius: 6px;
+  border: none;
+  background: var(--accent);
+  color: white;
+  cursor: pointer;
+  margin-top: 6px;
+}
+
+.lista-resenas {
+  list-style: none;
+  padding: 0;
+  max-width: 420px;
+  margin: 0 auto 32px;
+  display: flex;
+  flex-direction: column;
+  gap: 10px;
+}
+
+.lista-resenas li {
+  border: 1px solid var(--border);
+  border-radius: 8px;
+  padding: 10px 14px;
+  text-align: left;
+}
+
+.publicaciones ul {
+  list-style: none;
+  padding: 0;
+  max-width: 560px;
+  margin: 0 auto;
+  display: flex;
+  flex-direction: column;
+  gap: 8px;
+}
+
+.publicaciones li {
+  border: 1px solid var(--border);
+  border-radius: 8px;
+  padding: 10px 14px;
+  text-align: left;
+}
+
+/* ---------- Ejercicio 3 ---------- */
+.lista-tareas {
+  display: flex;
+  flex-direction: column;
+  gap: 12px;
+  max-width: 560px;
+  margin: 0 auto;
+}
+
+.tarea-card {
+  border: 1px solid var(--border);
+  border-radius: 10px;
+  padding: 14px 16px;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  gap: 12px;
+}
+
+.tarea-card .info h3 {
+  margin: 0 0 4px;
+  font-size: 16px;
+  color: var(--text-h);
+}
+
+.tarea-card .estado {
+  font-size: 12px;
+  padding: 3px 10px;
+  border-radius: 999px;
+  font-weight: 600;
+}
+
+.estado-pendiente { background: #fde68a; color: #7c4a03; }
+.estado-en-progreso { background: #bfdbfe; color: #1e3a8a; }
+.estado-completado { background: #bbf7d0; color: #166534; }
+
+.tarea-card .acciones {
+  display: flex;
+  gap: 8px;
+}
+
+.tarea-card button {
+  font: inherit;
+  font-size: 13px;
+  padding: 6px 10px;
+  border-radius: 6px;
+  border: 1px solid var(--border);
+  background: var(--bg);
+  color: var(--text-h);
+  cursor: pointer;
+}
+
+/* ---------- Ejercicio 4 ---------- */
+.buscador {
+  max-width: 360px;
+  margin: 0 auto 20px;
+}
+
+.buscador input {
+  width: 100%;
+  box-sizing: border-box;
+  font: inherit;
+  padding: 8px 10px;
+  border-radius: 6px;
+  border: 1px solid var(--border);
+  background: var(--bg);
+  color: var(--text-h);
+}
+
+.grid-usuarios {
+  display: grid;
+  grid-template-columns: repeat(auto-fill, minmax(220px, 1fr));
+  gap: 16px;
+}
+
+.usuario-card {
+  border: 1px solid var(--border);
+  border-radius: 10px;
+  padding: 14px 16px;
+  text-align: left;
+}
+
+.usuario-card h3 {
+  margin: 0 0 6px;
+  font-size: 16px;
+  color: var(--text-h);
+}
+
+.usuario-card p {
+  font-size: 14px;
+  margin: 2px 0;
+}
+
+.sin-resultados {
+  text-align: center;
+  color: var(--text);
+}

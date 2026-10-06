@@ -1,0 +1,47 @@
+body {
+  font-family: Arial, sans-serif;
+  margin: 20px auto;
+  max-width: 600px;
+  color: #000;
+}
+
+h1, h2, h3 {
+  font-size: 18px;
+  margin: 10px 0;
+}
+
+ul {
+  padding-left: 20px;
+}
+
+li {
+  margin: 5px 0;
+}
+
+form {
+  margin: 10px 0;
+}
+
+input, button {
+  padding: 5px;
+  margin-right: 5px;
+  font-size: 14px;
+}
+
+button {
+  cursor: pointer;
+}
+
+.total {
+  font-weight: bold;
+  margin-top: 10px;
+}
+
+.error {
+  color: red;
+  font-size: 14px;
+}
+
+a {
+  color: #000;
+}

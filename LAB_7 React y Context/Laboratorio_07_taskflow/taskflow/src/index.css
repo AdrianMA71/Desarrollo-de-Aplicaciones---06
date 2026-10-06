@@ -1,0 +1,24 @@
+:root { font-family: system-ui, Arial, sans-serif; color: #1f2937; }
+body { margin: 0; background: #f3f4f6; }
+.app, .contenedor { max-width: 720px; margin: 0 auto; padding: 1rem; }
+.encabezado { background: #166534; color: #fff; padding: 1rem 1.5rem; border-radius: 8px; }
+.encabezado h1 { margin: 0 0 .25rem; }
+.nav { display: flex; gap: 1rem; background: #fff; padding: .75rem 1rem; border-bottom: 2px solid #166534; }
+.nav a { color: #166534; font-weight: 600; text-decoration: none; }
+ul { list-style: none; padding: 0; }
+.tarea { display: flex; justify-content: space-between; align-items: center; background: #fff; padding: .6rem 1rem; margin-bottom: .5rem; border-radius: 6px; }
+.tarea.completada span, .tarea.completada a { text-decoration: line-through; color: #6b7280; }
+.formulario-tarea, .formulario { display: flex; gap: .5rem; flex-wrap: wrap; margin: 1rem 0; }
+input, select { padding: .5rem; border: 1px solid #d1d5db; border-radius: 6px; flex: 1; min-width: 120px; }
+button { background: #166534; color: #fff; border: 0; padding: .5rem .9rem; border-radius: 6px; cursor: pointer; }
+button.secundario { background: #6b7280; }
+button.peligro { background: #b91c1c; }
+.grid { display: grid; grid-template-columns: repeat(auto-fill, minmax(190px, 1fr)); gap: 1rem; }
+.card { background: #fff; padding: .8rem; border-radius: 8px; display: flex; flex-direction: column; gap: .4rem; }
+.card img { height: 130px; object-fit: contain; }
+.card h3 { font-size: .9rem; margin: 0; }
+.precio { font-weight: 700; color: #166534; }
+table { width: 100%; background: #fff; border-collapse: collapse; border-radius: 6px; }
+th, td { padding: .5rem; border-bottom: 1px solid #e5e7eb; text-align: left; }
+.total { font-size: 1.2rem; font-weight: 700; margin: 1rem 0; }
+.error { color: #b91c1c; }

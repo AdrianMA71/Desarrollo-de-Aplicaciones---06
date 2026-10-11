@@ -1,0 +1,11 @@
+HOST = "127.0.0.1"
+PUERTO = 8000
+
+TOKEN_VALIDO = "Bearer TOKEN_SECRETO_2026"
+
+RUTA_INSCRIPCIONES = "/api/inscripciones"
+METODO_PERMITIDO = "POST"
+
+CAMPOS_OBLIGATORIOS = ["dni", "correo_electronico", "programa_academico"]
+
+TAMANO_MAXIMO_CUERPO = 1048576

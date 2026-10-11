@@ -1,0 +1,54 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <title>Consulta de inventario</title>
+    <link rel="stylesheet" href="/estilos.css">
+</head>
+<body>
+    <main>
+        <h1>Consulta de inventario</h1>
+
+        <form id="formulario">
+            <label>
+                Filtro
+                <input type="text" id="filtro" placeholder="mouse, redes, cable">
+            </label>
+            <label>
+                Registros por página
+                <select id="limite">
+                    <option value="5">5</option>
+                    <option value="10" selected>10</option>
+                    <option value="20">20</option>
+                    <option value="100">100</option>
+                </select>
+            </label>
+            <button type="submit">Buscar</button>
+        </form>
+
+        <p id="resumen"></p>
+        <p id="mensaje"></p>
+
+        <table>
+            <thead>
+                <tr>
+                    <th>ID</th>
+                    <th>Nombre</th>
+                    <th>Categoría</th>
+                    <th>Stock</th>
+                </tr>
+            </thead>
+            <tbody id="cuerpo"></tbody>
+        </table>
+
+        <div class="paginacion">
+            <button id="anterior" type="button">Anterior</button>
+            <span id="indicador"></span>
+            <button id="siguiente" type="button">Siguiente</button>
+        </div>
+    </main>
+
+    <script src="/app.js"></script>
+</body>
+</html>

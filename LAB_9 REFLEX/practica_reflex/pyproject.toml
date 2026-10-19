@@ -1,0 +1,19 @@
+[project]
+name = "practica-reflex"
+version = "0.1.0"
+description = "Add your description here"
+readme = "README.md"
+authors = [
+    { name = "AdrianMA71", email = "adrianma71589158@gmail.com" }
+]
+requires-python = ">=3.11"
+dependencies = [
+    "reflex>=0.10.0",
+]
+
+[project.scripts]
+practica-reflex = "practica_reflex:main"
+
+[build-system]
+requires = ["uv_build>=0.13.0,<0.14.0"]
+build-backend = "uv_build"

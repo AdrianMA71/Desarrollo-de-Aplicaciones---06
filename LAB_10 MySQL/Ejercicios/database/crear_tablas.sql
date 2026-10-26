@@ -1,0 +1,49 @@
+CREATE DATABASE IF NOT EXISTS laboratorio10_verde
+CHARACTER SET utf8mb4 COLLATE utf8mb4_unicode_ci;
+
+USE laboratorio10_verde;
+
+CREATE TABLE IF NOT EXISTS ventas (
+    id INT UNSIGNED AUTO_INCREMENT PRIMARY KEY,
+    nombre VARCHAR(120) NOT NULL,
+    fecha_nacimiento DATE NOT NULL,
+    fecha_vuelo DATE NOT NULL,
+    destino VARCHAR(120) NOT NULL,
+    edad SMALLINT UNSIGNED NOT NULL,
+    categoria VARCHAR(20) NOT NULL,
+    precio_base DECIMAL(10, 2) NOT NULL,
+    total DECIMAL(10, 2) NOT NULL,
+    creado_en TIMESTAMP DEFAULT CURRENT_TIMESTAMP
+);
+
+CREATE TABLE IF NOT EXISTS matrices (
+    id INT UNSIGNED AUTO_INCREMENT PRIMARY KEY,
+    dimension TINYINT UNSIGNED NOT NULL,
+    valores LONGTEXT NOT NULL,
+    es_perfecta BOOLEAN NOT NULL,
+    suma_objetivo INT NOT NULL,
+    creado_en TIMESTAMP DEFAULT CURRENT_TIMESTAMP
+);
+
+CREATE TABLE IF NOT EXISTS usuarios (
+    id INT UNSIGNED AUTO_INCREMENT PRIMARY KEY,
+    nombre VARCHAR(120) NOT NULL,
+    direccion VARCHAR(250) NOT NULL,
+    correo VARCHAR(160) NOT NULL UNIQUE,
+    clave_hash VARCHAR(250) NOT NULL,
+    fecha_nacimiento DATE NOT NULL,
+    sexo VARCHAR(10) NOT NULL,
+    temas LONGTEXT NOT NULL,
+    aficiones LONGTEXT NOT NULL,
+    creado_en TIMESTAMP DEFAULT CURRENT_TIMESTAMP
+);
+
+CREATE TABLE IF NOT EXISTS archivos (
+    id INT UNSIGNED AUTO_INCREMENT PRIMARY KEY,
+    especialidad VARCHAR(30) NOT NULL,
+    nombre_original VARCHAR(255) NOT NULL,
+    nombre_guardado VARCHAR(100) NOT NULL UNIQUE,
+    extension VARCHAR(10) NOT NULL,
+    tamano INT UNSIGNED NOT NULL,
+    creado_en TIMESTAMP DEFAULT CURRENT_TIMESTAMP
+);

@@ -1,0 +1,275 @@
+* {
+  box-sizing: border-box;
+}
+body {
+  margin: 0;
+  background: #fff;
+  color: #252525;
+  font:
+    16px/1.5 Arial,
+    sans-serif;
+}
+.contenedor {
+  width: min(960px, 92%);
+  margin: 0 auto;
+}
+.cabecera {
+  border-bottom: 1px solid #ccc;
+  background: #fafafa;
+}
+.nombre-sitio {
+  margin: 0;
+  padding-top: 18px;
+  font-size: 18px;
+  font-weight: bold;
+}
+nav {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 6px;
+  margin-top: 12px;
+}
+nav a {
+  padding: 12px 16px;
+  color: #333;
+  text-decoration: none;
+  border-bottom: 3px solid transparent;
+}
+nav a.activo {
+  color: #245d30;
+  border-bottom-color: #78b882;
+  font-weight: bold;
+}
+nav a:hover {
+  background: #edf5ee;
+}
+.principal {
+  padding-top: 20px;
+  padding-bottom: 25px;
+}
+h1 {
+  font-size: 26px;
+  margin: 10px 0;
+}
+h2 {
+  font-size: 19px;
+  margin: 0 0 16px;
+}
+p {
+  margin: 10px 0 16px;
+}
+.panel {
+  border: 1px solid #ccc;
+  border-radius: 5px;
+  padding: 24px;
+  margin: 22px 0;
+}
+.campo {
+  display: flex;
+  flex-direction: column;
+  gap: 6px;
+  margin-bottom: 16px;
+}
+.campo > label,
+legend {
+  font-weight: bold;
+}
+input,
+select,
+textarea {
+  width: 100%;
+  padding: 10px;
+  border: 1px solid #aaa;
+  border-radius: 3px;
+  font: inherit;
+  background: white;
+  color: #222;
+}
+input:focus,
+select:focus,
+textarea:focus {
+  outline: 2px solid #8ab793;
+  outline-offset: 1px;
+}
+textarea {
+  min-height: 80px;
+  resize: vertical;
+}
+input[type='file'] {
+  padding: 8px;
+}
+input[type='radio'],
+input[type='checkbox'] {
+  width: auto;
+  accent-color: #52865b;
+}
+.dos-columnas {
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  gap: 0 22px;
+}
+button,
+.boton {
+  display: inline-block;
+  padding: 10px 18px;
+  border: 1px solid #8cb795;
+  border-radius: 4px;
+  background: #c9e8ce;
+  color: #173e20;
+  font: inherit;
+  font-weight: bold;
+  cursor: pointer;
+  text-decoration: none;
+}
+button:hover,
+.boton:hover {
+  background: #b6dbbc;
+}
+button.secundario {
+  background: white;
+  color: #333;
+  border-color: #bbb;
+}
+button:disabled,
+select:disabled {
+  cursor: wait;
+  opacity: 0.6;
+}
+.acciones {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 12px;
+}
+.ayuda {
+  color: #5a5a5a;
+  font-size: 14px;
+}
+.resultado,
+.mensaje {
+  padding: 18px;
+  background: #edf7ee;
+  border: 1px solid #b6d4bb;
+  border-radius: 4px;
+  margin-top: 20px;
+  overflow-wrap: anywhere;
+}
+.resultado h2 {
+  margin-bottom: 8px;
+}
+.resultado p:last-child {
+  margin-bottom: 0;
+}
+.resultado.neutral {
+  background: #f7f7f7;
+  border-color: #ccc;
+}
+.mensaje.error {
+  background: #fff1f1;
+  border-color: #d9aaaa;
+  color: #862525;
+}
+.total {
+  font-size: 24px;
+  font-weight: bold;
+}
+.tabla-contenedor {
+  overflow-x: auto;
+}
+table {
+  width: 100%;
+  border-collapse: collapse;
+}
+th,
+td {
+  border: 1px solid #ccc;
+  text-align: left;
+  padding: 10px;
+  overflow-wrap: anywhere;
+}
+th {
+  background: #f3f3f3;
+}
+.matriz {
+  width: auto;
+  margin: 22px auto;
+}
+.matriz td {
+  min-width: 52px;
+  height: 52px;
+  text-align: center;
+  font-size: 20px;
+}
+fieldset {
+  border: 1px solid #ccc;
+  padding: 14px;
+  margin: 0 0 18px;
+}
+.opciones {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 12px 22px;
+}
+.opciones label {
+  display: flex;
+  align-items: center;
+  gap: 7px;
+}
+.confirmacion {
+  display: grid;
+  grid-template-columns: 220px 1fr;
+  margin: 22px 0;
+}
+.confirmacion dt,
+.confirmacion dd {
+  margin: 0;
+  padding: 12px;
+  border-bottom: 1px solid #ddd;
+  overflow-wrap: anywhere;
+}
+.confirmacion dt {
+  font-weight: bold;
+  background: #f7f7f7;
+}
+pre {
+  white-space: pre-wrap;
+  overflow-wrap: anywhere;
+  background: #f7f7f7;
+  border: 1px solid #ccc;
+  padding: 16px;
+}
+.vista-imagen {
+  max-width: 100%;
+  max-height: 500px;
+  display: block;
+  margin-bottom: 16px;
+}
+iframe {
+  width: 100%;
+  height: 480px;
+  border: 1px solid #ccc;
+}
+footer {
+  text-align: center;
+  border-top: 1px solid #ddd;
+  padding: 20px;
+  color: #666;
+  font-size: 13px;
+}
+@media (max-width: 600px) {
+  .dos-columnas {
+    grid-template-columns: 1fr;
+  }
+  .panel {
+    padding: 16px;
+  }
+  nav a {
+    padding: 10px;
+    font-size: 14px;
+  }
+  .confirmacion {
+    grid-template-columns: 1fr;
+  }
+  .confirmacion dt {
+    border-bottom: none;
+  }
+}

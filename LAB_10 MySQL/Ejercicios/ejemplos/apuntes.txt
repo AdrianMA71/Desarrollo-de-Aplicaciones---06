@@ -1,0 +1,4 @@
+Introduccion a HTML y CSS
+HTML organiza el contenido de una pagina.
+CSS define los colores, los bordes y la distribucion.
+React permite construir interfaces con componentes.

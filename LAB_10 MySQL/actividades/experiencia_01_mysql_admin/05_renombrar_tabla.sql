@@ -1,0 +1,2 @@
+ALTER TABLE classics RENAME pre1900;
+ALTER TABLE pre1900 RENAME classics;

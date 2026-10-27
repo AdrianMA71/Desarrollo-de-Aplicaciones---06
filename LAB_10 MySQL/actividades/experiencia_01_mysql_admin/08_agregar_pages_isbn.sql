@@ -1,0 +1,2 @@
+ALTER TABLE classics ADD pages SMALLINT UNSIGNED;
+ALTER TABLE classics ADD isbn CHAR(13);

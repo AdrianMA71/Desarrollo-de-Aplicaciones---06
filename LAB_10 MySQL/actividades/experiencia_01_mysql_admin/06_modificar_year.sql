@@ -1,0 +1,1 @@
+ALTER TABLE classics MODIFY year SMALLINT;

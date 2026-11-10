@@ -1,0 +1,27 @@
+{
+  "name": "laboratorio10-node-express",
+  "version": "1.0.0",
+  "private": true,
+  "author": "Adrian Maldonado Aguilar",
+  "scripts": {
+    "exp01": "node --env-file=.env experiencias/01_node_basico/holamundo.js",
+    "exp02": "node --env-file=.env experiencias/02_node_mysql/testing.js",
+    "exp03": "node --env-file=.env experiencias/03_node_html/index.js",
+    "exp04": "node --env-file=.env experiencias/04_express_basico/index.js",
+    "exp05": "node --env-file=.env experiencias/05_express_rutas/usoRutas.js",
+    "exp06": "node --env-file=.env experiencias/06_express_middleware/ejemploMiddleware.js",
+    "ej01a": "node --env-file=.env ejercicios/01_node/01_servidor_hora/servidor.js",
+    "ej01b": "node --env-file=.env ejercicios/01_node/02_consulta_cursos/consulta.js",
+    "ej01c": "node --env-file=.env ejercicios/01_node/03_pagina_cursos/index.js",
+    "ej02a": "node --env-file=.env ejercicios/02_express/01_saludo/index.js",
+    "ej02b": "node --env-file=.env ejercicios/02_express/02_catalogo/app.js",
+    "ej02c": "node --env-file=.env ejercicios/02_express/03_middleware/app.js"
+  },
+  "engines": {
+    "node": ">=22.0.0"
+  },
+  "dependencies": {
+    "express": "4.21.2",
+    "mysql": "2.18.1"
+  }
+}

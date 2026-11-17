@@ -1,0 +1,10 @@
+const express = require('express');
+const { noEncontrada, manejarError } = require('./middlewares/errores');
+const app = express();
+app.use(express.json({ limit: '32kb' }));
+app.get('/', (req, res) => res.json({ mensaje: 'API Bodega en funcionamiento' }));
+app.use('/api/categorias', require('./routes/categorias.routes'));
+app.use('/api/productos', require('./routes/productos.routes'));
+app.use(noEncontrada);
+app.use(manejarError);
+module.exports = app;

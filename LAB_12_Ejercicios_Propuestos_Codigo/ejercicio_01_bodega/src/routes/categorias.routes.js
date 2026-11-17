@@ -1,0 +1,10 @@
+const { Router } = require('express');
+const ctrl = require('../controllers/categorias.controller');
+const validarId = require('../middlewares/id');
+const router = Router();
+router.get('/', ctrl.listar);
+router.get('/:id', validarId, ctrl.obtener);
+router.post('/', ctrl.crear);
+router.put('/:id', validarId, ctrl.actualizar);
+router.delete('/:id', validarId, ctrl.eliminar);
+module.exports = router;

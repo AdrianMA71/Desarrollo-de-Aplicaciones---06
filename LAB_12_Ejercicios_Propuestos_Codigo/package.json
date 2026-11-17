@@ -1,0 +1,7 @@
+{
+  "name": "lab12-ejercicios-propuestos",
+  "version": "1.0.0",
+  "private": true,
+  "engines": {"node": ">=22"},
+  "workspaces": ["ejercicio_01_bodega", "ejercicio_02_tareas", "ejercicio_03_matricula"]
+}

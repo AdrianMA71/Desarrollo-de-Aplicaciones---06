@@ -1,0 +1,10 @@
+{
+  "watch": [
+    "src",
+    ".env"
+  ],
+  "ext": "js,json,env",
+  "ignore": [
+    "pruebas/*"
+  ]
+}

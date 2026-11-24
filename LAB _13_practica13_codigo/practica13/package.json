@@ -1,0 +1,16 @@
+{
+  "name": "api-alumnos-mongodb",
+  "version": "1.0.0",
+  "description": "Practica 12 - API REST con NodeJS y MongoDB (PUT y DELETE)",
+  "main": "app/server.js",
+  "scripts": {
+    "start": "node app/server.js",
+    "dev": "nodemon app/server.js",
+    "ejercicio1": "mongosh scripts/ejercicio1.js"
+  },
+  "license": "ISC",
+  "dependencies": {
+    "express": "^4.22.3",
+    "mongoose": "^8.24.11"
+  }
+}
